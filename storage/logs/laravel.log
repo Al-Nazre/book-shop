@@ -1,0 +1,167 @@
+[2024-03-17 19:16:28] local.ERROR: rename(F:\Work 2024\Projects\book-shop\bootstrap\cache\pac404D.tmp,F:\Work 2024\Projects\book-shop\bootstrap\cache\packages.php): Access is denied. (code: 5) {"exception":"[object] (ErrorException(code: 0): rename(F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\pac404D.tmp,F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\packages.php): Access is denied. (code: 5) at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:211)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'rename(F:\\\\Work ...', 'F:\\\\Work 2024\\\\Pr...', 211, Array)
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(211): rename('F:\\\\Work 2024\\\\Pr...', 'F:\\\\Work 2024\\\\Pr...')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(181): Illuminate\\Filesystem\\Filesystem->replace('F:\\\\Work 2024\\\\Pr...', '<?php return ar...')
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(136): Illuminate\\Foundation\\PackageManifest->write(Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(106): Illuminate\\Foundation\\PackageManifest->build()
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(89): Illuminate\\Foundation\\PackageManifest->getManifest()
+#6 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(78): Illuminate\\Foundation\\PackageManifest->config('aliases')
+#7 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#8 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2024-03-17 19:16:28] local.ERROR: rename(F:\Work 2024\Projects\book-shop\bootstrap\cache\pac4059.tmp,F:\Work 2024\Projects\book-shop\bootstrap\cache\packages.php): Access is denied. (code: 5) {"exception":"[object] (ErrorException(code: 0): rename(F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\pac4059.tmp,F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\packages.php): Access is denied. (code: 5) at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:211)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'rename(F:\\\\Work ...', 'F:\\\\Work 2024\\\\Pr...', 211, Array)
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(211): rename('F:\\\\Work 2024\\\\Pr...', 'F:\\\\Work 2024\\\\Pr...')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(181): Illuminate\\Filesystem\\Filesystem->replace('F:\\\\Work 2024\\\\Pr...', '<?php return ar...')
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(136): Illuminate\\Foundation\\PackageManifest->write(Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(106): Illuminate\\Foundation\\PackageManifest->build()
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(89): Illuminate\\Foundation\\PackageManifest->getManifest()
+#6 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(78): Illuminate\\Foundation\\PackageManifest->config('aliases')
+#7 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#8 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2024-03-17 19:16:28] local.ERROR: rename(F:\Work 2024\Projects\book-shop\bootstrap\cache\pac404C.tmp,F:\Work 2024\Projects\book-shop\bootstrap\cache\packages.php): Access is denied. (code: 5) {"exception":"[object] (ErrorException(code: 0): rename(F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\pac404C.tmp,F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\packages.php): Access is denied. (code: 5) at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:211)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'rename(F:\\\\Work ...', 'F:\\\\Work 2024\\\\Pr...', 211, Array)
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(211): rename('F:\\\\Work 2024\\\\Pr...', 'F:\\\\Work 2024\\\\Pr...')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(181): Illuminate\\Filesystem\\Filesystem->replace('F:\\\\Work 2024\\\\Pr...', '<?php return ar...')
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(136): Illuminate\\Foundation\\PackageManifest->write(Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(106): Illuminate\\Foundation\\PackageManifest->build()
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(89): Illuminate\\Foundation\\PackageManifest->getManifest()
+#6 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(78): Illuminate\\Foundation\\PackageManifest->config('aliases')
+#7 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#8 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2024-03-17 19:16:28] local.ERROR: rename(F:\Work 2024\Projects\book-shop\bootstrap\cache\pac404B.tmp,F:\Work 2024\Projects\book-shop\bootstrap\cache\packages.php): Access is denied. (code: 5) {"exception":"[object] (ErrorException(code: 0): rename(F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\pac404B.tmp,F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\packages.php): Access is denied. (code: 5) at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:211)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'rename(F:\\\\Work ...', 'F:\\\\Work 2024\\\\Pr...', 211, Array)
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(211): rename('F:\\\\Work 2024\\\\Pr...', 'F:\\\\Work 2024\\\\Pr...')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(181): Illuminate\\Filesystem\\Filesystem->replace('F:\\\\Work 2024\\\\Pr...', '<?php return ar...')
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(136): Illuminate\\Foundation\\PackageManifest->write(Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(106): Illuminate\\Foundation\\PackageManifest->build()
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(89): Illuminate\\Foundation\\PackageManifest->getManifest()
+#6 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(78): Illuminate\\Foundation\\PackageManifest->config('aliases')
+#7 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#8 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2024-03-17 19:16:30] local.ERROR: Uncaught ReflectionException: Class view does not exist in F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php:877
+Stack trace:
+#0 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(758): Illuminate\Container\Container->build('view')
+#2 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(851): Illuminate\Container\Container->resolve('view', Array, true)
+#3 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(836): Illuminate\Container\Container->make('view', Array)
+#5 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Ill {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class view does not exist in F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:877
+Stack trace:
+#0 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(758): Illuminate\\Container\\Container->build('view')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): Illuminate\\Container\\Container->resolve('view', Array, true)
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Foundation\\Application->resolve('view', Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(836): Illuminate\\Container\\Container->make('view', Array)
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Ill at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:879)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-17 19:16:30] local.ERROR: Uncaught ReflectionException: Class view does not exist in F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php:877
+Stack trace:
+#0 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(758): Illuminate\Container\Container->build('view')
+#2 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(851): Illuminate\Container\Container->resolve('view', Array, true)
+#3 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(836): Illuminate\Container\Container->make('view', Array)
+#5 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Ill {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class view does not exist in F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:877
+Stack trace:
+#0 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(758): Illuminate\\Container\\Container->build('view')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): Illuminate\\Container\\Container->resolve('view', Array, true)
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Foundation\\Application->resolve('view', Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(836): Illuminate\\Container\\Container->make('view', Array)
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Ill at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:879)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-17 19:16:30] local.ERROR: Uncaught ReflectionException: Class view does not exist in F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php:877
+Stack trace:
+#0 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(758): Illuminate\Container\Container->build('view')
+#2 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(851): Illuminate\Container\Container->resolve('view', Array, true)
+#3 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(836): Illuminate\Container\Container->make('view', Array)
+#5 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Ill {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class view does not exist in F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:877
+Stack trace:
+#0 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(758): Illuminate\\Container\\Container->build('view')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): Illuminate\\Container\\Container->resolve('view', Array, true)
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Foundation\\Application->resolve('view', Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(836): Illuminate\\Container\\Container->make('view', Array)
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Ill at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:879)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-17 19:16:30] local.ERROR: Uncaught ReflectionException: Class view does not exist in F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php:877
+Stack trace:
+#0 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(758): Illuminate\Container\Container->build('view')
+#2 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(851): Illuminate\Container\Container->resolve('view', Array, true)
+#3 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(836): Illuminate\Container\Container->make('view', Array)
+#5 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Ill {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class view does not exist in F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:877
+Stack trace:
+#0 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(877): ReflectionClass->__construct('view')
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(758): Illuminate\\Container\\Container->build('view')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): Illuminate\\Container\\Container->resolve('view', Array, true)
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Foundation\\Application->resolve('view', Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(836): Illuminate\\Container\\Container->make('view', Array)
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Ill at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:879)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-17 19:16:30] local.ERROR: rename(F:\Work 2024\Projects\book-shop\bootstrap\cache\ser50B5.tmp,F:\Work 2024\Projects\book-shop\bootstrap\cache\services.php): Access is denied. (code: 5) {"exception":"[object] (ErrorException(code: 0): rename(F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\ser50B5.tmp,F:\\Work 2024\\Projects\\book-shop\\bootstrap\\cache\\services.php): Access is denied. (code: 5) at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:211)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'rename(F:\\\\Work ...', 'F:\\\\Work 2024\\\\Pr...', 211, Array)
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(211): rename('F:\\\\Work 2024\\\\Pr...', 'F:\\\\Work 2024\\\\Pr...')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(194): Illuminate\\Filesystem\\Filesystem->replace('F:\\\\Work 2024\\\\Pr...', '<?php return ar...')
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(165): Illuminate\\Foundation\\ProviderRepository->writeManifest(Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#5 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(659): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#6 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#7 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#8 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#9 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#10 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2024-03-17 19:16:32] local.ERROR: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Target [Illuminate\Contracts\Auth\Access\Gate] is not instantiable. in F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php:1089
+Stack trace:
+#0 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(886): Illuminate\Container\Container->notInstantiable('Illuminate\\Cont...')
+#1 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(758): Illuminate\Container\Container->build('Illuminate\\Cont...')
+#2 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(851): Illuminate\Container\Container->resolve('Illuminate\\Cont...', Array, true)
+#3 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Illuminate\Container\Container.php(694): Illuminate\Foundation\Application->resolve('Illuminate\\Cont...', Array)
+#4 F:\Work 2024\Projects\book-shop\vendor\laravel\framework\src\Ill {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Illuminate\\Contracts\\Container\\BindingResolutionException: Target [Illuminate\\Contracts\\Auth\\Access\\Gate] is not instantiable. in F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:1089
+Stack trace:
+#0 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(886): Illuminate\\Container\\Container->notInstantiable('Illuminate\\\\Cont...')
+#1 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(758): Illuminate\\Container\\Container->build('Illuminate\\\\Cont...')
+#2 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): Illuminate\\Container\\Container->resolve('Illuminate\\\\Cont...', Array, true)
+#3 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Foundation\\Application->resolve('Illuminate\\\\Cont...', Array)
+#4 F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Ill at F:\\Work 2024\\Projects\\book-shop\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:1089)
+[stacktrace]
+#0 {main}
+"} 
