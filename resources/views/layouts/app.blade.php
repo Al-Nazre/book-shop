@@ -47,7 +47,7 @@
         <!-- Helper CSS -->
         <link rel="stylesheet" href="{{ asset('frontend/css/helper.css') }}">
         <!-- Main Style CSS -->
-        <link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
   
@@ -90,7 +90,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <div class="" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
