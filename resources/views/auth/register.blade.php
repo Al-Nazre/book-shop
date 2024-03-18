@@ -42,7 +42,7 @@
                                         <input class="mb-0" type="password" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="register-button mt-0">Register</button>
+                                        <button type="submit" class="register-button mt-0 w-100">Register</button>
                                     </div>
                                 </div>
                             </div>
