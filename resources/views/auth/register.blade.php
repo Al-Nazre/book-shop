@@ -14,7 +14,7 @@
                             <div class="login-form">
                                 <h4 class="login-title">Register</h4>
                                 <div class="row d-flex">
-                                    <div class="col-md-6 col-12 mb-20">
+                                    <div class="col-md-12 col-12 mb-20">
                                         <label>Name</label>
                                         <input class="mb-0 @error('name') is-invalid @enderror" type="text" placeholder="Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                         
