@@ -49,8 +49,8 @@
                                                 @endif
                                                                                 
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <button type="submit" class="register-button mt-0">Login</button>
+                                                <div class="col-md-12 d-flex justify-content-center">
+                                                    <button type="submit" class="register-button mt-0 w-100">Login</button>
                                                 </div>
                                             </div>
                                         </div>
