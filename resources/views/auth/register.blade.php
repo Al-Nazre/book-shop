@@ -33,11 +33,11 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-6 mb-20">
+                                    <div class="col-md-12 mb-20">
                                         <label>Password</label>
                                         <input class="mb-0  @error('password') is-invalid @enderror" type="password" placeholder="Password" name="password" required autocomplete="password">
                                     </div>
-                                    <div class="col-md-6 mb-20">
+                                    <div class="col-md-12 mb-20">
                                         <label>Confirm Password</label>
                                         <input class="mb-0" type="password" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
                                     </div>
