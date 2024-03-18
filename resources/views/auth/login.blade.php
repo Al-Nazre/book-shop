@@ -7,10 +7,10 @@
             <div class="card">
                 <div class="card-body">
                     
-                    <div class="page-section mb-60">
+                    <div class="page-section my-5">
                         <div class="container">
                             <div class="row d-flex">
-                                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30 mx-auto">
+                                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6  mx-auto">
                                     <!-- Login Form s-->
                                     <form method="POST" action="{{ route('login') }}">
                                        @csrf
