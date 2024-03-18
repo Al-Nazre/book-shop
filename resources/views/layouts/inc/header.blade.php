@@ -146,63 +146,75 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown">
-                        <a class="d-flex align-items-end position-relative p-10px" data-bs-toggle="dropdown" href="#">
-                            <!-- <i class="fal fa-user fa-2x"></i> -->
-                            <div class="d-inline-block online position-relative">
-                                <img data-src="./assets/images/avatar/1.jpg" alt="user avatar" width="44" height="44" class="rounded-circle img-fit lazyload">
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end rounded-0 dropdown-menu-md p-0">
-                            <div class="d-flex p-3 gap-2 border-bottom border-light">
-                                <div class="flex-shrink-0">
-                                    <img data-src="./assets/images/avatar/1.jpg" alt="user avatar" width="44" height="44" class="lazyload rounded-circle img-fit">
+                    @guest
+                        
+                    @else
+                        <li class="dropdown">
+                            <a class="d-flex align-items-end position-relative p-10px" data-bs-toggle="dropdown" href="#">
+                                <!-- <i class="fal fa-user fa-2x"></i> -->
+                                <div class="d-inline-block online position-relative">
+                                    <img data-src="{{ asset('frontend/assets/images/avatar/1.jpg') }}" alt="user avatar" width="44" height="44" class="rounded-circle img-fit lazyload">
                                 </div>
-                                <div class="flex-grow-1 ps-1">
-                                    <p class="mb-0 fw-500 text-capitalize"> মোশাররফ হোসেন </p>
-                                    <p class="mb-0 text-muted fs-14">+880 1997 316 189</p>
+                            </a>
+                            
+                                    <div class="dropdown-menu dropdown-menu-end rounded-0 dropdown-menu-md p-0">
+                                <div class="d-flex p-3 gap-2 border-bottom border-light">
+                                    <div class="flex-shrink-0">
+                                        <img data-src="{{ asset('frontend/assets/images/avatar/1.jpg') }}" alt="user avatar" width="44" height="44" class="lazyload rounded-circle img-fit">
+                                    </div>
+                                    <div class="flex-grow-1 ps-1">
+                                        <p class="mb-0 fw-500 text-capitalize">  {{ Auth::user()->name }} </p>
+                                        <p class="mb-0 text-muted fs-14">+880 1997 316 189</p>
+                                    </div>
                                 </div>
+                                <ul class="author-nav list-unstyled mb-0 p-3">
+                                    <li>
+                                        <a href="./dashboard/profile.html">
+                                            <i class="fal fa-user"></i>
+                                            <span>প্রোফাইল</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard/dashboard.html">
+                                            <i class="fal fa-home"></i>
+                                            <span>ডেশবোর্ড</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard/settings.html">
+                                            <i class="fal fa-cog"></i>
+                                            <span>সেটিংস</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard/purchased.html">
+                                            <i class="fal fa-shopping-cart"></i>
+                                            <span>অর্ডার সমূহ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard/wishlist.html">
+                                            <i class="fal fa-heart"></i>
+                                            <span>উইশলিস্ট</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                            <i class="fal fa-sign-out-alt fa-flip-horizontal"></i>
+                                            <span>লগ আউট</span>
+                                        </a>
+                                           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="author-nav list-unstyled mb-0 p-3">
-                                <li>
-                                    <a href="./dashboard/profile.html">
-                                        <i class="fal fa-user"></i>
-                                        <span>প্রোফাইল</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./dashboard/dashboard.html">
-                                        <i class="fal fa-home"></i>
-                                        <span>ডেশবোর্ড</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./dashboard/settings.html">
-                                        <i class="fal fa-cog"></i>
-                                        <span>সেটিংস</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./dashboard/purchased.html">
-                                        <i class="fal fa-shopping-cart"></i>
-                                        <span>অর্ডার সমূহ</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./dashboard/wishlist.html">
-                                        <i class="fal fa-heart"></i>
-                                        <span>উইশলিস্ট</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./login.html">
-                                        <i class="fal fa-sign-out-alt fa-flip-horizontal"></i>
-                                        <span>লগ আউট</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                            
+                            
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </div>

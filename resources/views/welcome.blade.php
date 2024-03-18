@@ -1,18 +1,26 @@
 @extends('layouts.master')
 @section('content')
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+          <section class="slider-area py-3">
+                <div class="container">
+                    <div class="carousel" data-items="1" data-autoplay="true" data-loop="true" data-infinite="true" data-dots="true" data-fade="true">
+                        <div class="single-item">
+                            <img class="lazyload w-100 img-fit d-md-block d-none" src="{{ asset('frontend/assets/images/slider/1.webp') }}" alt="Slide Image">
+                            <img class="lazyload w-100 img-fit d-md-none" data-src="{{ asset('frontend/assets/images/slider/mobile1.jpg') }}" alt="Slide Image">
+                        </div>
+                        <div class="single-item">
+                            <img class="lazyload w-100 img-fit d-md-block d-none" data-src="{{ asset('frontend/assets/images/slider/2.webp') }}" alt="Slide Image">
+                            <img class="lazyload w-100 img-fit d-md-none" data-src="{{ asset('frontend/assets/images/slider/mobile2.jpg') }}" alt="Slide Image">
+                        </div>
+                        <div class="single-item">
+                            <img class="lazyload w-100 img-fit d-md-block d-none" data-src="{{ asset('frontend/assets/images/slider/3.webp') }}" alt="Slide Image">
+                            <img class="lazyload w-100 img-fit d-md-none" data-src="{{ asset('frontend/assets/images/slider/mobile3.jpg') }}" alt="Slide Image">
+                        </div>
+                        <div class="single-item">
+                            <img class="lazyload w-100 img-fit d-md-block d-none" data-src="{{ asset('frontend/assets/images/slider/4.webp') }}" alt="Slide Image">
+                            <img class="lazyload w-100 img-fit d-md-none" data-src="{{ asset('frontend/assets/images/slider/mobile2.jpg') }}" alt="Slide Image">
+                        </div>
+                    </div>
                 </div>
-            @endif
-        </div>
+            </section>
+            <!-- End Slider Area -->
 @endsection
