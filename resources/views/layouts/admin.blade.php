@@ -14,20 +14,46 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
     
-    
+    <!-- Vendor CSS Files -->
+
+    <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/quill.snow.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/quill.remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/simple_database.css') }}" rel="stylesheet">
+
     
 </head>
 <body>
-    <div>
-       
+  @include('layouts.inc.admin.header')
 
-      @yield('content')
-    
-    </div>
+  @include('layouts.inc.admin.navbar')
+
+  @yield('content')
+
+
+  @include('layouts.inc.admin.footer')
 
      <!-- Scripts -->
+
+     <script src="{{ asset('admin/js/main.js') }}"></script>
+
+     <!-- Vendor JS Files -->
+
+    <script src="{{ asset('admin/js/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('admin/js/chart.min.js') }}"></script>
+    <script src="{{ asset('admin/js/echarts.min.js') }}"></script>
+    <script src="{{ asset('admin/js/quill.min.js') }}"></script>
+    <script src="{{ asset('admin/js/simple-datatables.js') }}"></script>
+    <script src="{{ asset('admin/js/tinymce.min.js') }}"></script>
+    <script src="{{ asset('admin/js/validate.js') }}"></script>
+
+
    
 </body>
 </html>
