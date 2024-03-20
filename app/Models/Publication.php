@@ -13,6 +13,8 @@ class Publication extends Model
     protected $fillable =[
         'name',
         'slug',
+        'img',
+        'description',
         'status',
         'popular',
     ];

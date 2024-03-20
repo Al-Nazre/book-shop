@@ -32,9 +32,11 @@
   @include('layouts.inc.admin.header')
 
   @include('layouts.inc.admin.sidebar')
+  <main id="main" class="main">
 
-  @yield('content')
-
+    @yield('content')
+    
+  </main>
 
   @include('layouts.inc.admin.footer')
 

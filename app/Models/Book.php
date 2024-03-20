@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Subject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Book extends Model
 {
@@ -28,4 +30,21 @@ class Book extends Model
         'meta_keywords',
         'meta_description',
     ];
+
+    public function subject(): HasOne
+    {
+        return $this->hasOne(Subject::class, 'id','subject_id');
+    }
+    public function type(): HasOne
+    {
+        return $this->hasOne(BookType::class, 'id','type_id');
+    }
+    public function author(): HasOne
+    {
+        return $this->hasOne(Author::class, 'id','author_id');
+    }
+    public function publication(): HasOne
+    {
+        return $this->hasOne(Publication::class, 'id','publication_id');
+    }
 }

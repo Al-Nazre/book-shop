@@ -16,9 +16,12 @@ class CreatePublicationTable extends Migration
         Schema::create('publication', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug');            
+            $table->string('img')->nullable();
+            $table->longText('description')->nullable();
             $table->tinyInteger('status');
             $table->tinyInteger('popular');
+
             $table->timestamps();
         });
     }
