@@ -26,8 +26,8 @@ Auth::routes();
 // Without Login
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::middleware(['auth', 'second'])->group(function () {
+Route::get('/home', [App\Http\Controllers\SiteController::class, 'index'])->name('home');
+
     
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
