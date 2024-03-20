@@ -31,7 +31,7 @@
 <body>
   @include('layouts.inc.admin.header')
 
-  @include('layouts.inc.admin.navbar')
+  @include('layouts.inc.admin.sidebar')
 
   @yield('content')
 

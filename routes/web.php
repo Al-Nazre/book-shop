@@ -31,9 +31,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
     
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
-    Route::get('/dashboard', function () {
-      return view('admin.dashboard');
-   });
+   // Route::get('/dashboard','Admin\HomeController@index')->name('adminHome');
+    Route::get('/dashboard',[App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminHome');
+
 });
 // Route::middleware('isAdmin')->group(function () {
 //     Route::get('/dashboard', function () {
