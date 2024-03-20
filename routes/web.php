@@ -43,6 +43,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('/author',[App\Http\Controllers\Admin\AuthorController::class, 'index'])->name('author.index');
     Route::get('/add-author',[App\Http\Controllers\Admin\AuthorController::class, 'add'])->name('author.add');
+    Route::post('/insert-author',[App\Http\Controllers\Admin\AuthorController::class, 'insert'])->name('author.insert');
 
 
 
