@@ -13,6 +13,7 @@ return array(
     'App\\Http\\Controllers\\Admin\\BookTypeController' => $baseDir . '/app/Http/Controllers/Admin/BookTypeController.php',
     'App\\Http\\Controllers\\Admin\\HomeController' => $baseDir . '/app/Http/Controllers/Admin/HomeController.php',
     'App\\Http\\Controllers\\Admin\\PublicationController' => $baseDir . '/app/Http/Controllers/Admin/PublicationController.php',
+    'App\\Http\\Controllers\\Admin\\SubSubjectController' => $baseDir . '/app/Http/Controllers/Admin/SubSubjectController.php',
     'App\\Http\\Controllers\\Admin\\SubjectController' => $baseDir . '/app/Http/Controllers/Admin/SubjectController.php',
     'App\\Http\\Controllers\\Admin\\UserController' => $baseDir . '/app/Http/Controllers/Admin/UserController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',

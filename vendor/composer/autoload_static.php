@@ -524,6 +524,7 @@ class ComposerStaticInit753fad179930b4176b7dccf3e610e531
         'App\\Http\\Controllers\\Admin\\BookTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/BookTypeController.php',
         'App\\Http\\Controllers\\Admin\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/HomeController.php',
         'App\\Http\\Controllers\\Admin\\PublicationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PublicationController.php',
+        'App\\Http\\Controllers\\Admin\\SubSubjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SubSubjectController.php',
         'App\\Http\\Controllers\\Admin\\SubjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SubjectController.php',
         'App\\Http\\Controllers\\Admin\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/UserController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',

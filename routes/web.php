@@ -62,6 +62,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('/book',[App\Http\Controllers\Admin\BookController::class, 'index'])->name('book.index');
     Route::get('/add-book',[App\Http\Controllers\Admin\BookController::class, 'add'])->name('book.add');
+    Route::post('/insert-book',[App\Http\Controllers\Admin\BookController::class, 'insert'])->name('book.insert');
+
 
 
     Route::get('/book-type',[App\Http\Controllers\Admin\BookTypeController::class, 'index'])->name('book-type.index');

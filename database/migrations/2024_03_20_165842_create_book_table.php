@@ -18,20 +18,18 @@ class CreateBookTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('img')->nullable();
+            $table->string('code')->nullable();
             $table->bigInteger('subject_id')->nullable();
+            $table->bigInteger('sub_subject_id')->nullable();
             $table->bigInteger('type_id')->nullable();
             $table->bigInteger('publication_id')->nullable();
             $table->bigInteger('author_id')->nullable();
-            $table->mediumText('short_description')->nullable();
-            $table->longText('description')->nullable();
+            $table->bigInteger('detail_id')->nullable();
             $table->string('qty');
             $table->string('price');
             $table->string('discount')->nullable();
             $table->tinyInteger('status');
             $table->tinyInteger('popular');
-            $table->mediumText('meta_title')->nullable();
-            $table->mediumText('meta_keywords')->nullable();
-            $table->mediumText('meta_description')->nullable();
             $table->timestamps();
         });
     }
