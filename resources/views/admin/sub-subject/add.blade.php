@@ -16,10 +16,23 @@
             <div class="col-lg-6">
                 <div class="card border-primary">
                     <div class="card-body">
-                        <h5 class="card-title text-success fs-2" align='center'>Add New Subject</h5>
+                        <h5 class="card-title text-success fs-2" align='center'>Add New Sub-Subject</h5>
 
-                        <form action="{{ route('subject.insert') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('sub-subject.insert') }}" method="post" enctype="multipart/form-data">
                             @csrf
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label">Select</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select" aria-label="Default select example" name='subject_id'>
+                                    <option selected>Open Subject</option>
+
+                                    @foreach ($subjects as $subject)
+                                    <option value="{{ $subject->id }}">{{ $subject->name }}</option>
+                                    @endforeach
+                                    
+                                    </select>
+                                </div>
+                            </div>
                             <div class="mb-3 form-outline">
                                 <input type="text" class="form-control " name ='name' placeholder="Name">
                             </div>
@@ -44,5 +57,24 @@
             </div>
         </div>
   </section>
+                {{-- <div class="row">
+                    <div class="col-md-6">
+                        <label for="supplier">Supplier</label>
+                        <div class="form-group {{ $errors->has('vendorId') ? ' has-danger' : '' }}">
+                            <select class="form-control chosen-select" name="vendorId" required="">
+                                <option value=" ">Select Supplier</option>
+                                @foreach ($subjects as $vendor)
+                                    <option value="{{ $vendor->id }}">{{ $vendor->name }}</option>
+                                @endforeach
+                            </select>
+
+                            @if ($errors->has('vendorId'))
+                                @foreach ($errors->get('vendorId') as $error)
+                                    <div class="form-control-feedback">{{ $error }}</div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>                   
+                </div> --}}
 
 @endsection

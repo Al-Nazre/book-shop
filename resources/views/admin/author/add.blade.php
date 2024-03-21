@@ -55,17 +55,6 @@
       </div>
  </section>
 
- <style>
-    input.form-control:focus, textarea.form-control:focus {
-        outline: none;
-        box-shadow: none;
-        border: 1px solid green;
-    }
-
-    input.form-control, textarea.form-control, .btn-submit {
-        border: 1px solid blue;
-        border-radius: 0px;
-    }
- </style>
+ 
 
 @endsection

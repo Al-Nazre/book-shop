@@ -26,7 +26,25 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Components Nav -->
+      </li><!-- End Subject Nav -->
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#sub-subjects-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Sub Subjects</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="sub-subjects-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ route('sub-subject.index') }}">
+              <i class="bi bi-circle"></i><span>All Sub-Subjects</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('sub-subject.add') }}">
+              <i class="bi bi-circle"></i><span>Add Sub-Subjects</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Sub-Subject Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#book-type-nav" data-bs-toggle="collapse" href="#">
@@ -44,7 +62,7 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Components Nav -->
+      </li><!-- End BookType Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#publication-nav" data-bs-toggle="collapse" href="#">

@@ -25,6 +25,7 @@
     <link href="{{ asset('admin/css/quill.snow.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/quill.remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/simple_database.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
 
     
 </head>

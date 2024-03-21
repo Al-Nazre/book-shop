@@ -3,32 +3,34 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\BookType;
+use App\Models\Subject;
+use App\Models\SubSubject;
 use Illuminate\Http\Request;
 
-class BookTypeController extends Controller
+class SubSubjectController extends Controller
 {
     public function index(){
-        return view('admin.book-type.index');
+        return view('admin.sub-subject.index');
     }
-
-     public function add(){
-        return view('admin.book-type.add');
+    
+    public function add(){
+        $subjects = Subject::all();
+        return view('admin.sub-subject.add', compact('subjects',));
     }
-
     public function insert(Request $request){
         $request->validate([
          'name'=>'required',
          'slug'=>'required',
         ]);
         
-        BookType::create([
+        SubSubject::create([
             'name' => $request->name,
             'slug' => $request->slug,
+            'subject_id'=>$request->subject_id,
             'status' => $request->status == TRUE ? '1':'0',
             'popular' => $request->popular == TRUE ? '1':'0',
 
         ]);
-        return redirect('/subject')->with('status','Book Type Created Successfully');
+        return redirect('/sub-subject')->with('status','Subject Created Successfully');
     }
 }

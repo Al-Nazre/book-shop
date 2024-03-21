@@ -18,14 +18,15 @@ class AuthorController extends Controller
 
     public function insert(Request $request){
         $request->validate([
-         
+         'name'=>'required',
+         'slug'=>'required',
         ]);
         $filename = null;
         if($request->hasfile('img')){
             $file = $request->file('img');
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext;
-            $file->move('assetে/uploads/author',$filename);
+            $file->move('assets/uploads/author',$filename);
         }
 
         Author::create([

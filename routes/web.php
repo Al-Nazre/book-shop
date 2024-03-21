@@ -38,6 +38,13 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('/subject',[App\Http\Controllers\Admin\SubjectController::class, 'index'])->name('subject.index');
     Route::get('/add-subject',[App\Http\Controllers\Admin\SubjectController::class, 'add'])->name('subject.add');
+    Route::post('/insert-subject',[App\Http\Controllers\Admin\SubjectController::class, 'insert'])->name('subject.insert');
+
+
+    Route::get('/sub-subject',[App\Http\Controllers\Admin\SubSubjectController::class, 'index'])->name('sub-subject.index');
+    Route::get('/add-sub-subject',[App\Http\Controllers\Admin\SubSubjectController::class, 'add'])->name('sub-subject.add');
+    Route::post('/insert-sub-subject',[App\Http\Controllers\Admin\SubSubjectController::class, 'insert'])->name('sub-subject.insert');
+
 
 
 
@@ -49,14 +56,18 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('/publication',[App\Http\Controllers\Admin\PublicationController::class, 'index'])->name('publication.index');
     Route::get('/add-publication',[App\Http\Controllers\Admin\PublicationController::class, 'add'])->name('publication.add');
+    Route::post('/insert-publication',[App\Http\Controllers\Admin\PublicationController::class, 'insert'])->name('publication.insert');
 
 
 
     Route::get('/book',[App\Http\Controllers\Admin\BookController::class, 'index'])->name('book.index');
     Route::get('/add-book',[App\Http\Controllers\Admin\BookController::class, 'add'])->name('book.add');
 
+
     Route::get('/book-type',[App\Http\Controllers\Admin\BookTypeController::class, 'index'])->name('book-type.index');
     Route::get('/add-book-type',[App\Http\Controllers\Admin\BookTypeController::class, 'add'])->name('book-type.add');
+    Route::post('/insert-book-type',[App\Http\Controllers\Admin\BookTypeController::class, 'insert'])->name('book-type.insert');
+
     
     Route::get('/user',[App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
     Route::get('/add-user',[App\Http\Controllers\Admin\UserController::class, 'add'])->name('user.add');
