@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap5.css">
 
-<table id="auth_Table" class="table table-striped" style="width:100%">
+<table id="example" class="table table-striped" style="width:100%">
     <thead>
         <tr>
             <th>Name</th>
@@ -487,10 +487,8 @@
 </table>
 
 <script>	
-    // new DataTable('#auth_Table');
-    $(document).ready(function () {
-        $('#auth_Table').DataTable();
-    });
+    new DataTable('#example');
+    
 </script>
 
 <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
