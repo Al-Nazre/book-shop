@@ -23,9 +23,11 @@
     <link href="{{ asset('admin/css/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/quill.snow.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/quill.bubble.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/quill.remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/simple_database.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">s
 
     
 </head>
@@ -49,7 +51,7 @@
 
     <script src="{{ asset('admin/js/apexcharts.min.js') }}"></script>
     <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('admin/js/chart.min.js') }}"></script>
+    <script src="{{ asset('admin/js/chart.umd.js') }}"></script>
     <script src="{{ asset('admin/js/echarts.min.js') }}"></script>
     <script src="{{ asset('admin/js/quill.min.js') }}"></script>
     <script src="{{ asset('admin/js/simple-datatables.js') }}"></script>

@@ -24,7 +24,6 @@ class CreateBookTable extends Migration
             $table->bigInteger('type_id')->nullable();
             $table->bigInteger('publication_id')->nullable();
             $table->bigInteger('author_id')->nullable();
-            $table->bigInteger('detail_id')->nullable();
             $table->string('qty');
             $table->string('price');
             $table->string('discount')->nullable();
