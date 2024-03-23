@@ -27,7 +27,7 @@
     <link href="{{ asset('admin/css/quill.remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/simple_database.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">s
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
 
     
 </head>
@@ -57,6 +57,14 @@
     <script src="{{ asset('admin/js/simple-datatables.js') }}"></script>
     <script src="{{ asset('admin/js/tinymce.min.js') }}"></script>
     <script src="{{ asset('admin/js/validate.js') }}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    @if (session('status')){
+      <script>
+        swal("{{ session('status') }}");
+      </script>
+    }
+    @endif
 
 
    

@@ -10,7 +10,9 @@ use Illuminate\Http\Request;
 class SubSubjectController extends Controller
 {
     public function index(){
-        return view('admin.sub-subject.index');
+        $subSubjects = SubSubject::all();
+
+        return view('admin.sub-subject.index',compact('subSubjects'));
     }
     
     public function add(){
@@ -32,5 +34,11 @@ class SubSubjectController extends Controller
 
         ]);
         return redirect('/sub-subject')->with('status','Subject Created Successfully');
+    }
+    public function delete($id){
+        $subSubject = SubSubject::find($id);
+    
+            $subSubject->delete();
+        return redirect('/subject')->with('status','Sub Subject Deleted Successfully');
     }
 }

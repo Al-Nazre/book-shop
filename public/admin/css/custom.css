@@ -9,4 +9,10 @@
         border: 1px solid blue;
         border-radius: 0px;
     }
+    .line-clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+     }
  

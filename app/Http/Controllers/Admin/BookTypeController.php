@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class BookTypeController extends Controller
 {
     public function index(){
-        return view('admin.book-type.index');
+        $types = BookType::all();
+        return view('admin.book-type.index',compact('types'));
     }
 
      public function add(){
@@ -29,6 +30,14 @@ class BookTypeController extends Controller
             'popular' => $request->popular == TRUE ? '1':'0',
 
         ]);
-        return redirect('/subject')->with('status','Book Type Created Successfully');
+        return redirect('/book-type')->with('status','Book Type Created Successfully');
+    }
+    public function delete($id){
+        
+        $type = BookType::find($id);
+        $name = $type->name;
+        
+            $type->delete();
+        return redirect('/book-type')->with('status',$name.' Deleted Successfully');
     }
 }

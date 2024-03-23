@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Publication;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PublicationController extends Controller
 {
     public function index(){
-        return view('admin.publication.index');
+        $publications = Publication::all();
+        return view('admin.publication.index', compact('publications'));
     }
      public function add(){
         return view('admin.publication.add');
@@ -38,5 +40,19 @@ class PublicationController extends Controller
 
         ]);
         return redirect('/publication')->with('status','Publication Created Successfully');
+    }
+
+    public function delete($id){
+        
+        $publication = Publication::find($id);
+        if($publication->image){
+            $path = 'assets/uploads/publication'.$publication->image;
+            if(File::exists($path)){
+                File::delete($path);
+                
+            }
+        }
+            $publication->delete();
+        return redirect('/publication')->with('status','Publication Deleted Successfully');
     }
 }

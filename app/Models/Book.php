@@ -44,7 +44,7 @@ class Book extends Model
     }
     public function subSubject(): HasOne
     {
-        return $this->hasOne(Subject::class, 'id','sub_subject_id');
+        return $this->hasOne(SubSubject::class, 'id','sub_subject_id');
     }
     public function type(): HasOne
     {

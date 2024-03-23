@@ -23,4 +23,7 @@
                 </div>
             </section>
             <!-- End Slider Area -->
+
+
+            
 @endsection

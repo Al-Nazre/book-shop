@@ -11,11 +11,13 @@ use App\Models\Publication;
 use App\Models\Subject;
 use App\Models\SubSubject;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class BookController extends Controller
 {
     public function index(){
-        return view('admin.book.index');
+        $books = Book::all();
+        return view('admin.book.index',compact('books'));
     }
 
      public function add(){
@@ -70,6 +72,21 @@ class BookController extends Controller
         ]);
 
 
-        return redirect('/book')->with('status','Publication Created Successfully');
+        return redirect('/book')->with('status','Book Created Successfully');
+    }
+    public function delete($id){
+        
+        $book = Book::find($id);
+        $book_detail = BookDetail::where('book_id',$id)->first();
+        if($book->image){
+            $path = 'assets/uploads/book'.$book->image;
+            if(File::exists($path)){
+                File::delete($path);
+                
+            }
+        }
+            $book->delete();
+            $book_detail->delete();
+        return redirect('/book')->with('status','Book Deleted Successfully');
     }
 }

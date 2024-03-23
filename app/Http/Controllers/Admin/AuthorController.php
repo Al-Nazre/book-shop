@@ -5,11 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Author;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+
 
 class AuthorController extends Controller
 {
     public function index(){
-        return view('admin.author.index');
+        $authors = Author::all();
+        return view('admin.author.index',compact('authors'));
     }
 
      public function add(){
@@ -39,5 +42,18 @@ class AuthorController extends Controller
 
         ]);
         return redirect('/author')->with('status','Author Created Successfully');
+    }
+    public function delete($id){
+        
+        $author = Author::find($id);
+        if($author->image){
+            $path = 'assets/uploads/author'.$author->image;
+            if(File::exists($path)){
+                File::delete($path);
+                
+            }
+        }
+            $author->delete();
+        return redirect('/author')->with('status','Author Deleted Successfully');
     }
 }
