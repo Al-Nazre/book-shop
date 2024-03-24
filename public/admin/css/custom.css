@@ -1,14 +1,19 @@
 
-    input.form-control:focus, textarea.form-control:focus {
+    input.form-control:focus, textarea.form-control:focus, .form-select:focus {
         outline: none;
         box-shadow: none;
         border: 1px solid green;
     }
 
-    input.form-control, textarea.form-control, .btn-submit {
+    input.form-control, textarea.form-control, .form-select {
         border: 1px solid blue;
         border-radius: 0px;
     }
+
+    .btn-submit {
+        border-radius: 0px;
+    }
+
     .line-clamp {
         display: -webkit-box;
         -webkit-line-clamp: 3;
