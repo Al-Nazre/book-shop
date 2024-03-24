@@ -37,37 +37,47 @@
     <br><br>
     <div class="card mb-5">
         <header class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item"> <a href="#" class="nav-link active" aria-current="true">Description</a> </li>
-                <li class="nav-item"> <a href="#" class="nav-link">Specs</a> </li>
-                <li class="nav-item"> <a href="#" class="nav-link">Author</a> </li>
+            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation"> <a href="#" class="nav-link active"  id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Description</a> </li>
+                <li class="nav-item" role="presentation"> <a href="#" class="nav-link"  id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Specs</a> </li>
+                <li class="nav-item" role="presentation"> <a href="#" class="nav-link"  id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Author</a> </li>
             </ul>
         </header>
-        <article class="card-body">
-            <p>With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-            <ul class="list-check cols-two">
-                <li>Some great feature name here </li>
-                <li>Lorem ipsum dolor sit amet, consectetur </li>
-                <li>Duis aute irure dolor in reprehenderit </li>
-                <li>Optical heart sensor </li>
-                <li>Easy fast and ver good </li>
-                <li>Some great feature name here </li>
-                <li>Modern style and design</li>
-            </ul>
-            <hr>
-            <dl class="row">
-                <dt class="col-sm-3">Display</dt>
-                <dd class="col-sm-9">13.3-inch LED-backlit display with IPS</dd>
-                <dt class="col-sm-3">Processor</dt>
-                <dd class="col-sm-9">2.3GHz dual-core Intel Core i5</dd>
-                <dt class="col-sm-3">Camera</dt>
-                <dd class="col-sm-9">720p FaceTime HD camera</dd>
-                <dt class="col-sm-3">Memory</dt>
-                <dd class="col-sm-9">8 GB RAM or 16 GB RAM</dd>
-                <dt class="col-sm-3">Graphics</dt>
-                <dd class="col-sm-9">Intel Iris Plus Graphics 640</dd>
-            </dl>
-        </article>
+        <div class="tab-content card-body" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <p>With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                <ul class="list-check cols-two">
+                    <li>Some great feature name here </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur </li>
+                    <li>Duis aute irure dolor in reprehenderit </li>
+                    <li>Optical heart sensor </li>
+                    <li>Easy fast and ver good </li>
+                    <li>Some great feature name here </li>
+                    <li>Modern style and design</li>
+                </ul>
+                <hr>
+                <dl class="row">
+                    <dt class="col-sm-3">Display</dt>
+                    <dd class="col-sm-9">13.3-inch LED-backlit display with IPS</dd>
+                    <dt class="col-sm-3">Processor</dt>
+                    <dd class="col-sm-9">2.3GHz dual-core Intel Core i5</dd>
+                    <dt class="col-sm-3">Camera</dt>
+                    <dd class="col-sm-9">720p FaceTime HD camera</dd>
+                    <dt class="col-sm-3">Memory</dt>
+                    <dd class="col-sm-9">8 GB RAM or 16 GB RAM</dd>
+                    <dt class="col-sm-3">Graphics</dt>
+                    <dd class="col-sm-9">Intel Iris Plus Graphics 640</dd>
+                </dl>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <ul class="list-check cols-two">
+                    <li>Title : সাজিদ বান্ডেল </li>
+                    <li>Author : বইবাজার কালেকশন </li>
+                    <li>ISBN :</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+        </div>
     </div>
 
     <div class="card mb-4">
@@ -80,16 +90,10 @@
                  <button class="btn btn-light btn-sm float-end "> <i class="fa fa-ellipsis-v"></i> </button> 
               </div>
               <div class="icontext">
-                 <img src="./Ecommerce templates for Figma and Sketch_files/avatar.jpg" class="img-xs icon rounded-circle"> 
+                 <img src="#" class="img-xs icon rounded-circle"> 
                  <div class="text">
                     <h6 class="mb-0"> Michael Jonathan </h6>
-                    <div class="rating-wrap">
-                       <ul class="rating-stars">
-                          <li style="width:80%" class="stars-active"> <img src="./Ecommerce templates for Figma and Sketch_files/stars-active.svg" alt=""> </li>
-                          <li> <img src="./Ecommerce templates for Figma and Sketch_files/starts-disable.svg" alt=""> </li>
-                       </ul>
-                       <b class="dot"></b> <small class="label-rating text-muted"> Purchased on Wed, May 12 </small> 
-                    </div>
+                    
                  </div>
               </div>
               <!-- icontext.// --> 
@@ -103,16 +107,9 @@
                  <button class="btn btn-light btn-sm float-end "> <i class="fa fa-ellipsis-v"></i> </button> 
               </div>
               <div class="icontext">
-                 <img src="./Ecommerce templates for Figma and Sketch_files/avatar1.jpg" class="img-xs icon rounded-circle"> 
+                 <img src="#" class="img-xs icon rounded-circle"> 
                  <div class="text">
                     <h6 class="mb-0"> Michael Jonathan </h6>
-                    <div class="rating-wrap">
-                       <ul class="rating-stars">
-                          <li style="width:80%" class="stars-active"> <img src="./Ecommerce templates for Figma and Sketch_files/stars-active.svg" alt=""> </li>
-                          <li> <img src="./Ecommerce templates for Figma and Sketch_files/starts-disable.svg" alt=""> </li>
-                       </ul>
-                       <b class="dot"></b> <small class="label-rating text-muted"> Purchased on Wed, May 12 </small> 
-                    </div>
                  </div>
               </div>
               <!-- icontext.// --> 
@@ -129,22 +126,16 @@
                  <img src="./Ecommerce templates for Figma and Sketch_files/avatar3.jpg" class="img-xs icon rounded-circle"> 
                  <div class="text">
                     <h6 class="mb-0"> John Alex </h6>
-                    <div class="rating-wrap">
-                       <ul class="rating-stars">
-                          <li style="width:80%" class="stars-active"> <img src="./Ecommerce templates for Figma and Sketch_files/stars-active.svg" alt=""> </li>
-                          <li> <img src="./Ecommerce templates for Figma and Sketch_files/starts-disable.svg" alt=""> </li>
-                       </ul>
-                       <b class="dot"></b> <small class="label-rating text-muted"> Purchased on Wed, Apr 30 </small> 
-                    </div>
                  </div>
               </div>
               <!-- icontext.// --> 
               <div class="mt-3">
                  <p> It used to be great, finding almost every song, but now i dont know what happened (they might be hacked even) that it can not find any song and it just makes up a different song to thats all and all the best It used to be great, finding almost every song, but now i dont know what happened (they might be hacked even) </p>
               </div>
-           </blockquote>
+           </blockquote><br>
+           <button class="btn btn-success ms-auto">Write Review</button>
         </div>
-     </div>
+    </div>
 </div>
 
 @endsection
