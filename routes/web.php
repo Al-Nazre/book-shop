@@ -22,6 +22,7 @@ Auth::routes();
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/book-detail/', [App\Http\Controllers\HomeController::class, 'detail'])->name('home');
 
 Route::middleware(['auth', 'auth'])->group(function () {
     

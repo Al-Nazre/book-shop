@@ -29,4 +29,7 @@ class HomeController extends Controller
         $trend_subjects = Subject::where('home', 1)->get();
         return view('home',compact('trend_subjects'));
     }
+    function detail(){
+        return view('detail');
+    }
 }
