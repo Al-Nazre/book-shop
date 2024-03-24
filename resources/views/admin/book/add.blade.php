@@ -2,17 +2,16 @@
 
 @section('content')
 
-    <section class="section">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="card border-primary">
-                    <div class="card-body">
-                        <h5 class="card-title text-success fs-2" align='center'>Add New Book</h5>
-
-                        <form action="{{ route('book.insert') }}" method="post" enctype="multipart/form-data">
+    <section class="section">    
+        <div class="card border-primary">
+            <div class="card-body">
+                <h5 class="card-title text-success fs-2" align='center'>Add New Book</h5>
+                <form action="{{ route('book.insert') }}" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-lg-6">
                             @csrf
                             <div class="row mb-3">
-                               
+                                <label class="col-sm-2 col-form-label">Subject</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" aria-label="Default select example" name='subject_id'>
                                     <option selected>Select Subject</option>
@@ -23,8 +22,9 @@
                                     
                                     </select>
                                 </div>
+                            </div>
                             <div class="row mb-3">
-                               
+                                <label class="col-sm-2 col-form-label">Sub-Subject</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" aria-label="Default select example" name='sub_subject_id'>
                                     <option selected>Select Sub-Subject</option>
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                
+                                <label class="col-sm-2 col-form-label">Author</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" aria-label="Default select example" name='author_id'>
                                     <option selected>Select Author</option>
@@ -136,12 +136,25 @@
                             <div class="mb-3">
                                 <input type="text" class="form-control" name ='language' placeholder ='Language'>
                             </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name ='edition' placeholder ='Edition'>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name ='publish' placeholder ='Publish'>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name ='country' placeholder ='Country'>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name ='language' placeholder ='Language'>
+                            </div>
                             <button type="submit" class="btn btn-primary w-100 btn-submit">Submit Form</button>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
-           
         </div>
     </section>
 
