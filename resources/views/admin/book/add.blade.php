@@ -103,6 +103,9 @@
                             <div class="mb-3">
                                 <input type="number" class="form-control" name ='qty' placeholder ='Quantity'>
                             </div>
+                            
+                        </div>
+                        <div class="col-lg-6">
                             <div class="mb-3">
                                 <input type="text" class="form-control" name ='meta_title' placeholder ='Meta Title'>
                             </div>
@@ -123,21 +126,6 @@
                                     <label class="form-check-label" for="flexSwitchCheckChecked">Trending</label>
                                 </div>
                             </div>
-                            
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name ='edition' placeholder ='Edition'>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name ='publish' placeholder ='Publish'>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name ='country' placeholder ='Country'>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name ='language' placeholder ='Language'>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
                             <div class="mb-3">
                                 <input type="text" class="form-control" name ='edition' placeholder ='Edition'>
                             </div>
