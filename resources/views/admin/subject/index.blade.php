@@ -13,6 +13,7 @@ use App\Models\SubSubject;
                             <th>SL</th>
                             <th>Name</th>
                             <th>Sub-Subject</th>
+                            <th>Home</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -34,8 +35,13 @@ use App\Models\SubSubject;
                                 else{
                                     $sub = 0;
                                 }
+                                $home = 'No';
+                                if($subject->home == 1){
+                                    $home = 'Yes';
+                                }
                             @endphp 
                             <td>{{ $sub }}</td>    
+                            <td>{{ $home }}</td>    
                             
                             <td class="d-flex align-content-center">
                                 <button class="btn btn-sm btn-primary me-3">Edit</button>

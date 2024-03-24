@@ -2,30 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
-class SiteController extends Controller
+class HomeController extends Controller
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function welcome(){
-     return view('welcome');
-    }
+    
      public function index()
     {
-        return view('home');
+        $trend_subjects = Subject::where('home', 1)->get();
+        return view('home',compact('trend_subjects'));
     }
 }

@@ -32,9 +32,19 @@
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name='status' checked>
                                     <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
                                 </div>
+                            </div>
+                            <div class="d-flex mb-3">  
+                            
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name='popular'>
                                     <label class="form-check-label" for="flexSwitchCheckChecked">Trending</label>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">  
+        
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name='home'>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Add to Home</label>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary w-100 btn-submit">Submit</button>

@@ -16,6 +16,7 @@ class Subject extends Model
         'slug',
         'status',
         'popular',
+        'home',
     ];
     public function subSubject(): HasOne
     {

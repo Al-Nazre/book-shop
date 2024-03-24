@@ -39,6 +39,6 @@ class SubSubjectController extends Controller
         $subSubject = SubSubject::find($id);
     
             $subSubject->delete();
-        return redirect('/subject')->with('status','Sub Subject Deleted Successfully');
+        return redirect('/sub-subject')->with('status','Sub Subject Deleted Successfully');
     }
 }

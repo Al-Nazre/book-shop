@@ -28,6 +28,7 @@ class SubjectController extends Controller
             'slug' => $request->slug,
             'status' => $request->status == TRUE ? '1':'0',
             'popular' => $request->popular == TRUE ? '1':'0',
+            'home' => $request->home == TRUE ? '1':'0',
 
         ]);
         return redirect('/subject')->with('status','Subject Created Successfully');

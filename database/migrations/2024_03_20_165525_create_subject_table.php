@@ -19,6 +19,7 @@ class CreateSubjectTable extends Migration
             $table->string('slug');
             $table->tinyInteger('status');
             $table->tinyInteger('popular');
+            $table->tinyInteger('home');
             $table->timestamps();
         });
     }

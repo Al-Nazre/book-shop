@@ -17,17 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-// Without Login
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome']);
 
-Route::get('/home', [App\Http\Controllers\SiteController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::middleware(['auth', 'auth'])->group(function () {
+    
+});
     
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
@@ -88,8 +86,3 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
 
 });
-// Route::middleware('isAdmin')->group(function () {
-//     Route::get('/dashboard', function () {
-//       return "this is admin";
-//    });
-// });
