@@ -37,7 +37,7 @@
                         <div class="p-10px mb-3 d-flex align-items-center gap-3 rounded-1 bg-white rounded-3 shadow-md">
                             <h5 class="h5 ps-2 mb-0 text-primary flex-grow-1">{{ $subject->name }}</h5>
                             <div class="flex-shrink-0">
-                                <a class="btn btn-primary fs-14 pb-1" href="./category.html">এই বিষয়ে সকল বই</a>
+                                <a class="btn btn-primary fs-14 pb-1" href="{{ url('/category-books/'.$subject->slug) }}">এই বিষয়ে সকল বই</a>
                             </div>
                         </div>
                         <div class="bg-white p-sm-3 p-2 rounded-3 shadow-md">
@@ -51,7 +51,7 @@
                                 <div class="single-item p-1">
                                     <div class="single-product border border-light">
                                         <figure class="mb-0 position-relative overflow-hidden">
-                                            <a href="./single-product.html">
+                                            <a href="{{ url('/book/'.$book->slug) }}">
                                                 <img class="lazyload" data-src="{{ asset('assets/uploads/book/'.$book->img) }}" alt="Products title goes here">
                                             </a>
                                             <span class="onsale"> {{ $book->discount }}% <br>ছাড়</span>
