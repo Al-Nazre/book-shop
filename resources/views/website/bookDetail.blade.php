@@ -1,6 +1,15 @@
 @extends('layouts.master')
-@section('content')
 
+@section('title',$book->name)
+    
+
+
+@section('content')
+<div class="py-3 mb-4 shadow-sm bg-warning border-top">
+    <div class="container">
+        <h6 class="mb-0">Home / {{ $book->subject->name }} / {{ $book->subSubject->name }} / {{ $book->name }}</h6>
+    </div>
+</div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -76,7 +85,7 @@
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    
+
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Subject extends Model
@@ -18,8 +19,8 @@ class Subject extends Model
         'popular',
         'home',
     ];
-    public function subSubject(): HasOne
+    public function subSubject(): HasMany
     {
-        return $this->hasone(SubSubject::class,'id','subject_id');
+        return $this->hasMany(SubSubject::class,'id','subject_id');
     }
 }

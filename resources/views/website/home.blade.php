@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    Book Shop
+@endsection
 @section('content')
 @php
     use App\Models\SubSubject;
@@ -44,7 +47,7 @@
                             <div class="carousel" data-items="6" data-xl-items="5" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-arrows="true" data-infinite="true" data-loop="true"
                                 data-autoplay="true">
                                 @php
-                                    $books = Book::where('subject_id', $subject->id)->where('status',1)->get();
+                                    $books = Book::where('subject_id', $subject->id)->where('status', 1 )->get();
                                 @endphp
                                 @foreach ($books as $book)
                                     
@@ -106,16 +109,14 @@
             @endphp
                         <div class="pb-4">
                             <div class="row g-md-3 g-2">
-            @if($trend_sub_subjects)
-            @foreach ($trend_sub_subjects as $sub_subject)
-                
-                    
-                            <div class="col-lg col-md-4 col-6">
-                                <a class="btn btn-cat" href="#">{{ $sub_subject->name }}</a>
-                            </div>
-                        
-            @endforeach
-            @else
+                                
+                                @if($trend_sub_subjects)
+                                @foreach ($trend_sub_subjects as $sub_subject)
+                                <div class="col-lg col-md-4 col-6">
+                                    <a class="btn btn-cat" href="{{ url('/category-books/'.$subject->slug.'/'.$sub_subject->slug) }}">{{ $sub_subject->name }}</a>
+                                </div>                       
+                                @endforeach
+                                @else
                             </div>
                         </div>
             

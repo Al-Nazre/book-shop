@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Book;
 use App\Models\BookDetail;
 use App\Models\Subject;
+use App\Models\SubSubject;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -35,15 +36,29 @@ class HomeController extends Controller
         return view('test');
     }
 
-    public function categoryBooks($slug){
+    public function subjectBooks($slug){
         if(Subject::where('slug',$slug)->exists()){
             $subject = Subject::where('slug',$slug)->first();
             $books = Book::where('subject_id',$subject->id)->get();
-            return view('website.subjectBook', compact('books'));
+            return view('website.subjectBook', compact('books' , 'subject'));
         }
         else{
             return redirect('/')->with('status', 'No such Category');
         }
+    }
+
+    public function subSubjectBooks($subject_slug, $sub_subject_slug){
+        if(SubSubject::where('slug', $sub_subject_slug)->exists()){
+
+           $sub_subject = SubSubject::where('slug', $sub_subject_slug)->first();
+            $books = Book::where('sub_subject_id',$sub_subject->id)->get();
+
+            return view('website.subSubjectBooks', compact('books', 'sub_subject'));
+        }
+        else{
+            return redirect('/')->with('status', 'No such Category');
+        }
+
     }
 
     public function bookDetail($slug){
@@ -56,4 +71,6 @@ class HomeController extends Controller
             return redirect('/')->with('status', 'No such Book');
         }
     }
+
+    
 }
