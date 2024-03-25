@@ -22,9 +22,9 @@ Auth::routes();
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/book-detail/', [App\Http\Controllers\HomeController::class, 'detail'])->name('home');
-Route::get('/category-books/{slug}', [App\Http\Controllers\HomeController::class, 'categoryBooks'])->name('home');
-Route::get('/book/{slug}', [App\Http\Controllers\HomeController::class, 'bookDetail'])->name('home');
+Route::get('/test-ui/', [App\Http\Controllers\HomeController::class, 'testUi']);
+Route::get('/category-books/{slug}', [App\Http\Controllers\HomeController::class, 'categoryBooks'])->name('categoryBooks');
+Route::get('/book/{slug}', [App\Http\Controllers\HomeController::class, 'bookDetail'])->name('bookDetail');
 
 Route::middleware(['auth', 'auth'])->group(function () {
     

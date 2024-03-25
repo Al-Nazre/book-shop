@@ -34,9 +34,9 @@ class Book extends Model
         'popular',
     ];
 
-    public function detail(): HasOne
+    public function detail(): BelongsTo
     {
-        return $this->hasOne(BookDetail::class, 'id','detail_id');
+        return $this->belongsTo(BookDetail::class, 'id','book_id');
     }
     public function subject(): HasOne
     {

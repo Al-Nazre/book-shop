@@ -31,14 +31,14 @@ class HomeController extends Controller
         $trend_subjects = Subject::where('home', 1)->get();
         return view('website.home',compact('trend_subjects'));
     }
-    function detail(){
-        return view('detail');
+    function testUi(){
+        return view('test');
     }
 
     public function categoryBooks($slug){
         if(Subject::where('slug',$slug)->exists()){
             $subject = Subject::where('slug',$slug)->first();
-            $books = Book::where('subject_id',$subject->id);
+            $books = Book::where('subject_id',$subject->id)->get();
             return view('website.subjectBook', compact('books'));
         }
         else{
@@ -50,7 +50,7 @@ class HomeController extends Controller
         if(Book::where('slug',$slug)->exists()){
             $book = Book::where('slug',$slug)->first();
             $bookDetail = BookDetail::where('book_id',$book->id)->first();
-            return view('website.detail',compact('book'));
+            return view('website.bookDetail',compact('book'));
         }
         else{
             return redirect('/')->with('status', 'No such Book');

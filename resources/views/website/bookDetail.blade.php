@@ -44,7 +44,7 @@
             </header>
             <div class="tab-content card-body" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <p>{{}} </p>
+                    <p>{{$book->detail->description}} </p>
                     <ul class="list-check cols-two">
                         <li>Some great feature name here </li>
                         <li>Lorem ipsum dolor sit amet, consectetur </li>
@@ -75,7 +75,9 @@
                         <li>ISBN :</li>
                     </ul>
                 </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    
+                </div>
             </div>
         </div>
 
