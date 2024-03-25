@@ -32,34 +32,10 @@
                         <span>প্রকাশক</span>
                     </a>
                 </li>
-                <li>
-                    <a href="./category.html">
-                        <span>বইমেলা ২০২২</span>
-                    </a>
-                </li>
+                
                 <li>
                     <a href="./category.html">
                         <span>প্রি-অর্ডার</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./category.html">
-                        <span>প্রসাধনী</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./category.html">
-                        <span>পোশাক</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="./blogs.html">
-                        <span>ব্লগ</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./category.html">
-                        <span>স্টেশনারী</span>
                     </a>
                 </li>
             </ul>

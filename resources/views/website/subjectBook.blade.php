@@ -35,7 +35,7 @@
                     <div class="p-10px pt-3">
                         <div class="border-bottom pb-2 mb-2">
                             <h6 class="h6 mb-1 text-truncate-2 lh-1-5 hov-text-primary" style="height: 46px;">
-                                <a href="./single-product.html">{{ $book->name }}</a>
+                                <a href="{{ url('/book/'.$book->slug) }}">{{ $book->name }}</a>
                             </h6>
                         </div>
                         <div class="fs-14 mb-1" style="height: 42px;">
