@@ -26,6 +26,7 @@ Route::get('/test/', [App\Http\Controllers\HomeController::class, 'testUi']);
 Route::get('/category-books/{slug}', [App\Http\Controllers\HomeController::class, 'subjectBooks'])->name('subjectBooks');
 Route::get('/category-books/{subject_slug}/{sub_subject_slug}', [App\Http\Controllers\HomeController::class, 'subSubjectBooks'])->name('subSubjectBooks');
 Route::get('/book/{slug}', [App\Http\Controllers\HomeController::class, 'bookDetail'])->name('bookDetail');
+Route::post('/add-to-cart', [App\Http\Controllers\CartController::class, 'addToCart']);
 
 Route::middleware(['auth', 'auth'])->group(function () {
     
