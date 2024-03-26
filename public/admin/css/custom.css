@@ -21,3 +21,10 @@
         overflow: hidden;
      }
  
+
+     .pre-price:after {
+        width: 110%;
+        position: absolute;
+        height: 3px;
+        color: #000;
+     }

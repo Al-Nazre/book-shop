@@ -52,6 +52,10 @@
         <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
+
+        {{-- Custom css  --}}
+
+        <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
   
     {{-- Books-shop Theme References --}}
         <link rel="shortcut icon" href="{{ asset('frontend/assets/images/logo/favicon.png') }}" type="image/x-icon">
