@@ -85,7 +85,17 @@
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
+                    <div class="row my-3 g-3">
+                        <div class="col-md-4 col-lg-3">
+                            <div class="ratio ratio-1x1">
+                                <img class="img-fluid" src="{{ asset('assets/uploads/author/1711225219.jpg')  }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-lg-9">
+                            <h6>Jule Verne</h6>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem expedita, laudantium necessitatibus temporibus perferendis nemo ad placeat rerum unde pariatur. Id quo nulla veritatis. Consectetur labore eligendi nisi, eius dolorem expedita ex sint necessitatibus. Mollitia totam in accusantium consequuntur consectetur sapiente explicabo voluptatibus fuga recusandae at, molestiae vitae nemo nihil nam nisi. Earum voluptatem animi ipsam neque minus odio esse odit optio reiciendis exercitationem, excepturi veritatis tenetur? Corrupti, beatae repudiandae dolorem ullam recusandae fugiat fuga accusantium tenetur pariatur amet ipsam laborum perferendis quam dignissimos nam, sapiente qui maxime, quibusdam voluptatum cumque assumenda excepturi id! Ad accusamus eius quis vel explicabo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
