@@ -163,14 +163,14 @@
                             <a class="d-flex align-items-end position-relative p-10px" data-bs-toggle="dropdown" href="#">
                                 <!-- <i class="fal fa-user fa-2x"></i> -->
                                 <div class="d-inline-block online position-relative">
-                                    <img data-src="{{ asset('frontend/assets/images/avatar/1.jpg') }}" alt="user avatar" width="44" height="44" class="rounded-circle img-fit lazyload">
+                                    <img data-src="{{ asset('frontend/images/avatar/1.jpg') }}" alt="user avatar" width="44" height="44" class="rounded-circle img-fit lazyload">
                                 </div>
                             </a>
                             
                                     <div class="dropdown-menu dropdown-menu-end rounded-0 dropdown-menu-md p-0">
                                 <div class="d-flex p-3 gap-2 border-bottom border-light">
                                     <div class="flex-shrink-0">
-                                        <img data-src="{{ asset('frontend/assets/images/avatar/1.jpg') }}" alt="user avatar" width="44" height="44" class="lazyload rounded-circle img-fit">
+                                        <img data-src="{{ asset('frontend/images/avatar/1.jpg') }}" alt="user avatar" width="44" height="44" class="lazyload rounded-circle img-fit">
                                     </div>
                                     <div class="flex-grow-1 ps-1">
                                         <p class="mb-0 fw-500 text-capitalize">  {{ Auth::user()->name }} </p>

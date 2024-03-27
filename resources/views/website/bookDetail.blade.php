@@ -24,13 +24,13 @@
                                     </h1>
                                     <p class="mb-2 h5 text-muted">Author: {{ $book->author->name }}</p>
                                     
-                                    <div class="price-wrap mb-2"> <strong class="price h5">{{ $book->peice }} </strong> </div>
+                                    <div class="price-wrap mb-2"> <strong class="price h5">{{ $book->price }} </strong> </div>
                                     <!-- price-wrap // --> 
                                     <p class="mb-2 h5 text-muted">Publication: Asaxiy</p>
                                 
-                                
+                                <input type="hidden" value="{{ $book->id }}" class="book_id">
                                     <div class="row row-cols-auto gx-2 gy-3 align-items-center">
-                                        <div> <a href="#" class="btn btn-primary"> <i class="fa fa-shopping-cart me-1"></i> Add to cart </a> </div>
+                                        <div> <button  class="btn btn-primary addToCart"> <i class="fa fa-shopping-cart me-1"></i> Add to cart </button> </div>
                                         <div> <a href="#" class="btn btn-outline-primary"> <i class="fa fa-heart me-1"></i> Wishlist </a> </div>
                                     </div>
                                 </div>
@@ -158,4 +158,18 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+
+<script>
+    
+    $(document).ready(function () {
+        $('.addToCart').click(function (e) { 
+            e.preventDefault();
+             var book_id = $('.book_id').val();
+             alert(book_id);
+        });
+    });
+</script>
 @endsection

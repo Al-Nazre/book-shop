@@ -72,5 +72,19 @@ class HomeController extends Controller
         }
     }
 
+    public function subjectView($slug){
+        if(Subject::where('slug',$slug)->exists())
+        {
+            $subject = Subject::where('slug',$slug)->first();
+            $sub_subjects = SubSubject::where('subject_id', $subject->id)->get();
+            return view('website.subjectView', compact('subject','sub_subjects'));
+        }
+        else
+        {
+            return redirect('/')->with('status', 'No such Category');
+        }
+
+    }
+
     
 }

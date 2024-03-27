@@ -26,10 +26,13 @@
         <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
   
     {{-- Books-shop Theme References --}}
-        <link rel="shortcut icon" href="{{ asset('frontend/assets/images/logo/favicon.png') }}" type="image/x-icon">
-        <link rel="stylesheet" href="{{ asset('frontend/assets/css/plugin.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+        <link rel="shortcut icon" href="{{ asset('frontend/images/logo/favicon.png') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ asset('frontend/css/plugin.css') }}">
+    
+        {{-- <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
+
+        <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
 </head>
 <body>
     <div id="app">
@@ -47,8 +50,17 @@
      @yield('scripts')
    
     {{-- Books-shop Theme References --}}
-        <script type="text/javascript" src="{{ asset('frontend/assets/js/plugin.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/assets/js/script.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        {{-- <script type="text/javascript" src="{{ asset('frontend/js/plugin.js') }}"></script> --}}
+        
+   <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
+      {{-- <script src="{{ asset('admin/js/main.js') }}"></script> --}}
+     {{-- <script src="{{ asset('frontend/js/jquery.min.js') }}"></script> --}}
+
+     
+
+
 </body>
 </html>
 
