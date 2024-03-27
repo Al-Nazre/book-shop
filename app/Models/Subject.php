@@ -19,8 +19,12 @@ class Subject extends Model
         'popular',
         'home',
     ];
-    public function subSubject(): HasMany
+    public function subSubjects(): HasMany
     {
         return $this->hasMany(SubSubject::class,'id','subject_id');
+    }
+    public function books(): HasMany
+    {
+        return $this->hasMany(Book::class,'id','subject_id');
     }
 }

@@ -6,7 +6,21 @@
 @php
     use App\Models\SubSubject;
     use App\Models\Book;
+    use Illuminate\Support\Facades\Auth;
+
+if (Auth::check()) {
+    // User is logged in
+    echo "User is logged in";
+} else {
+    // User is not logged in
+    echo "User is not logged in";
+}
+    $sessionId = session()->getId();
+
+// You can then use $sessionId as needed, such as printing it out
+echo $sessionId;
 @endphp
+
           <section class="slider-area py-3">
                 <div class="container">
                     <div class="carousel" data-items="1" data-autoplay="true" data-loop="true" data-infinite="true" data-dots="true" data-fade="true">
@@ -50,7 +64,7 @@
                                     $books = Book::where('subject_id', $subject->id)->where('status', 1 )->get();
                                 @endphp
                                 @foreach ($books as $book)
-                                    
+                                    <input type="hidden" value = "{{ $book->id }}" class = 'book_id'>
                                 <div class="single-item p-1">
                                     <div class="single-product border border-light">
                                         <figure class="mb-0 position-relative overflow-hidden">
@@ -62,7 +76,7 @@
                                                 <a href="#">
                                                     <i class="fal fa-heart"></i>
                                                 </a>
-                                                <a href="#">
+                                                <a class="addToCart">
                                                     <i class="fal fa-shopping-cart"></i>
                                                 </a>
                                             </div>
@@ -127,6 +141,12 @@
                 </div>
             </section>
                     <!-- End Single Area -->
+@endsection
 
-            
+@section('scripts')
+<script>
+
+   
+   
+</script>
 @endsection
