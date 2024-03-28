@@ -12,6 +12,22 @@ use Illuminate\Support\Str;
 
 class CartController extends Controller
 {
+    public function index(){
+        $session_id = Session::get('session_id');
+
+        if(Auth::check()){
+
+            $cart_items = Cart::where('user_id',Auth::id())->get();
+            
+        }
+        else
+        {
+            $cart_items = Cart::where('session_id', $session_id)->get();
+            
+
+        }
+        return view('website.cart',compact('cart_items'));
+    }
 
     public function addToCart(Request $request){
         $book_id = $request->input('book_id');
@@ -60,5 +76,19 @@ class CartController extends Controller
         }
             
     
+    }
+
+    public function deletItem(Request $request) 
+    {
+        $item_id = $request->item_id;
+        $item = Cart::where('id',$item_id)->first();
+        if($item){
+            $item->delete();
+            // return response()->json(['status'=> $item->book->name.' deleted']);
+        }
+        else{
+            return response()->json(['status'=>'No item to delete']);
+
+        }
     }
 }

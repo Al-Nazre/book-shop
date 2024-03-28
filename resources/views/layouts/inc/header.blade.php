@@ -137,7 +137,7 @@
                                 </div>
                                 <div class="row g-2 p-4 pt-0">
                                     <div class="col-6 d-grid">
-                                        <a class="btn btn-primary" href="./cart.html">View Cart</a>
+                                        <a class="btn btn-primary" href="{{ route('cart') }}">View Cart</a>
                                     </div>
                                     <div class="col-6 d-grid">
                                         <a class="btn btn-secondary" href="./checkout.html">Checkout</a>

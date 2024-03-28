@@ -28,7 +28,7 @@
                                     <!-- price-wrap // --> 
                                     <p class="mb-2 h5 text-muted">Publication: Asaxiy</p>
                                 
-                                <input type="hidden" value="{{ $book->id }}" class="book_id">
+                                <input type="hidden" value="{{ $book->id }}" class="book-id">
 
                                     <div class="row row-cols-auto gx-2 gy-3 align-items-center">
                                         <div> <button  class="btn btn-primary addToCart"> <i class="fa fa-shopping-cart me-1"></i> Add to cart </button> </div>
@@ -168,7 +168,7 @@
     $(document).ready(function () {
          $('.addToCart').click(function (e) { 
             e.preventDefault();
-             var book_id = $('.book_id').val();
+             var book_id = $('.book-id').val();
                 
         $.ajaxSetup({
                 headers: {
