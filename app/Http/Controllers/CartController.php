@@ -14,19 +14,32 @@ class CartController extends Controller
 {
     public function index(){
         $session_id = Session::get('session_id');
-
+        $totalPrice = 0;
+        $qty = 0;
         if(Auth::check()){
 
             $cart_items = Cart::where('user_id',Auth::id())->get();
+       
+            foreach($cart_items as $item){
+                    $discount = 100 - $item->book->discount;
+                    $d_price = ($item->book->price/100)*$discount;
+                    $qty++;
+                    $totalPrice += $d_price;
+            }
             
         }
         else
         {
             $cart_items = Cart::where('session_id', $session_id)->get();
-            
+            foreach($cart_items as $item){
+            $discount = 100 - $item->book->discount;
+                    $d_price = ($item->book->price/100)*$discount;
+                    $qty++;
+                    $totalPrice += $d_price;
+            }
 
         }
-        return view('website.cart',compact('cart_items'));
+        return view('website.cart',compact('cart_items','totalPrice','qty'));
     }
 
     public function addToCart(Request $request){

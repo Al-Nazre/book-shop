@@ -8,17 +8,6 @@
     use App\Models\Book;
     use Illuminate\Support\Facades\Auth;
 
-if (Auth::check()) {
-    // User is logged in
-    echo "User is logged in";
-} else {
-    // User is not logged in
-    echo "User is not logged in";
-}
-    $sessionId = session()->getId();
-
-// You can then use $sessionId as needed, such as printing it out
-echo $sessionId;
 @endphp
 
           <section class="slider-area py-3">
@@ -66,7 +55,7 @@ echo $sessionId;
                                 @endphp
                                 @foreach ($books as $book)
                                     
-                                <div class="single-item p-1">
+                                <div class="single-item p-1 content">
                                     <div class="single-product border border-light">
                                         <figure class="mb-0 position-relative overflow-hidden">
                                             <a href="{{ url('/book/'.$book->slug) }}">
@@ -77,9 +66,8 @@ echo $sessionId;
                                                 <a href="#">
                                                     <i class="fal fa-heart"></i>
                                                 </a>
-                                                <a href="" id="addToCart{{ $sl++ }}">
-                                                <input type="hidden" value = "{{ $book->slug }}" id = 'book_id{{ $sl++ }}'>
-
+                                                <a href="" class="addToCart">
+                                                <input type="hidden" value = "{{ $book->id }}" class ='book-id'>
                                                     <i class="fal fa-shopping-cart"></i>
                                                 </a>
                                             </div>
@@ -149,9 +137,27 @@ echo $sessionId;
 @section('scripts')
 <script>
     $(document).ready(function () {
-        $('#').click(function (e) { 
+        $('.addToCart').click(function (e) { 
             e.preventDefault();
-            
+             var book_id = $(this).closest('.content').find('.book-id').val();
+            //  alert(book_id);
+                
+        $.ajaxSetup({
+                headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+            });
+             $.ajax({
+                method: "POST",
+                url: "/add-to-cart/",
+                data: {
+                    'book_id' : book_id,
+                },
+                
+                success: function (response) {
+                    swal(response.status);
+                }
+             });
         });
     });
 </script>

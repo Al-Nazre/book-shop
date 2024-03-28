@@ -28,7 +28,7 @@
                                <path d="M19 13H5v-2h14v2z"></path>
                             </svg>
                          </button>
-                         <input type="text" class="form-control qty" value="{{ $item->qty }}" id="qty"> 
+                         <input type="text" class="form-control qty" value="{{ $item->qty }}"> 
                          <button class="btn btn-light qty-increment" type="button" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24">
                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
@@ -42,6 +42,8 @@
                                 $discount = 100 - $item->book->discount;
                                 $d_price = ($item->book->price/100)*$discount;
                            @endphp
+                         <input type="text" class="form-control price" value="{{ $d_price }}"> 
+
                    <div class="col d-flex">
                      <del class="pre-price position-relative"> ৳ {{ $item->book->price }} </del>
                      <strong class="price ms-3"> ৳ {{ $d_price }} </strong> 
@@ -61,19 +63,19 @@
                    
                    <dl class="dlist-align d-flex">
                       <dt>Total price:</dt>
-                      <dd class="ms-auto"> $1403.97</dd>
+                      <dd class="ms-auto">  {{ $totalPrice }} </dd>
+                   </dl>
+                   <dl class="dlist-align d-flex">
+                      <dt>Quantity:</dt>
+                      <dd class="text-success ms-auto totalPrice" ><input value="{{ $qty }}"> </dd>
                    </dl>
                    <dl class="dlist-align d-flex">
                       <dt>Discount:</dt>
-                      <dd class="text-success ms-auto"> - $60.00 </dd>
-                   </dl>
-                   <dl class="dlist-align d-flex">
-                      <dt>TAX:</dt>
-                      <dd class="text-danger ms-auto"> + $14.00 </dd>
+                      <dd class="text-danger ms-auto"> </dd>
                    </dl>
                    <dl class="dlist-align d-flex">
                       <dt>Total:</dt>
-                      <dd class="ms-auto text-dark h5"> $1357.97 </dd>
+                      <dd class="ms-auto text-dark h5"> {{ $totalPrice }} </dd>
                    </dl>
                    <hr>
                    <a href="#" class="btn btn-primary mb-2 w-100">Checkout</a> <a href="#" class="btn btn-outline-primary w-100">Installment</a> 
@@ -93,6 +95,8 @@
       $('.qty-decrement').click(function (e) { 
          e.preventDefault();
 
+         var price = $(this).closest('.content').find('.price').val()
+
          var qty = $(this).closest('.content').find('.qty').val();
          var value = parseInt(qty, 10);
          // alert(value);
@@ -101,6 +105,8 @@
          {
             value--;
             $(this).closest('.content').find('.qty').val(value);
+            var item_price = price*value;
+
          }
          
       });
