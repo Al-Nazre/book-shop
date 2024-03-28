@@ -1759,3 +1759,24 @@ ul.author-nav li a i {
     font-size: 16px;
     padding: 5px 10px;
 }
+
+input.form-control:focus, textarea.form-control:focus, .form-select:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid green;
+}
+
+input.form-control, textarea.form-control, .form-select {
+    border: 1px solid blue;
+    border-radius: 0px;
+}
+
+.btn-submit {
+    border-radius: 0px;
+}
+
+.check-img-q {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+}
