@@ -14,13 +14,14 @@
                                     <!-- Login Form s-->
                                     <form method="POST" action="{{ route('login') }}">
                                        @csrf
-                                        <div class="login-form">
-                                            <h4 class="login-title">Login</h4>
+                                        <div class="from-group">
+                                            <h4 class="login-title text-success">Login</h4>
                                             <div class="row">
                                                 <div class="col-md-12 col-12 mb-20">
-                                                    <label>Email Address*</label>
-                                                    <input class="mb-0 @error('email') is-invalid @enderror" type="email" placeholder="Email Address"  name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                                    
+                                                    <div class="from-group">
+                                                        <label>Email Address*</label>
+                                                        <input class="mb-0 @error('email') is-invalid @enderror" type="email" placeholder="Email Address"  name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                    </div>
                                                     @error('email')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>

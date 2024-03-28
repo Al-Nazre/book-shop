@@ -21,9 +21,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
         
     
-        {{-- Custom css  --}}
-
-        <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
   
     {{-- Books-shop Theme References --}}
         <link rel="shortcut icon" href="{{ asset('frontend/images/logo/favicon.png') }}" type="image/x-icon">
@@ -31,6 +28,8 @@
     
         {{-- <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
 
+        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.icons.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
 </head>
