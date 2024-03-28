@@ -59,7 +59,7 @@ class LoginController extends Controller
                 }
             
             }
-            return redirect('home')->with('status','Logged in successfully');
+            return redirect('/');
         }
     }
 
