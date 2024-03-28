@@ -47,18 +47,21 @@
     </div>
 
      <!-- Scripts -->
-     @yield('scripts')
+    
    
     {{-- Books-shop Theme References --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 
-        {{-- <script type="text/javascript" src="{{ asset('frontend/js/plugin.js') }}"></script> --}}
+        <script type="text/javascript" src="{{ asset('frontend/js/plugin.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('frontend/js/script.js') }}"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
         
-   <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
+   {{-- <script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script> --}}
       {{-- <script src="{{ asset('admin/js/main.js') }}"></script> --}}
      {{-- <script src="{{ asset('frontend/js/jquery.min.js') }}"></script> --}}
 
-     
+      @yield('scripts')
 
 
 </body>

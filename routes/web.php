@@ -1,8 +1,24 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthorController;
+use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\Admin\BookTypeController;
+use App\Http\Controllers\Admin\PublicationController;
+use App\Http\Controllers\Admin\SubjectController;
+use App\Http\Controllers\Admin\SubSubjectController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+
+
+
+
+
+
+
 
 
 
@@ -27,7 +43,7 @@ Route::get('/category/{slug}', [App\Http\Controllers\HomeController::class, 'sub
 Route::get('/category-books/{slug}', [App\Http\Controllers\HomeController::class, 'subjectBooks'])->name('subjectBooks');
 Route::get('/category-books/{subject_slug}/{sub_subject_slug}', [App\Http\Controllers\HomeController::class, 'subSubjectBooks'])->name('subSubjectBooks');
 Route::get('/book/{slug}', [App\Http\Controllers\HomeController::class, 'bookDetail'])->name('bookDetail');
-Route::post('/add-to-cart', [App\Http\Controllers\CartController::class, 'addToCart']);
+Route::post('/add-to-cart/', [App\Http\Controllers\CartController::class, 'addToCart']);
 
 Route::middleware(['auth', 'auth'])->group(function () {
     

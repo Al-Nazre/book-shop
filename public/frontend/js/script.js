@@ -161,24 +161,24 @@ $(function () {
             document.documentElement.scrollTop = 0;
         });
 
-        var menu = new MmenuLight(document.querySelector("#menu"), "all");
+        // var menu = new MmenuLight(document.querySelector("#menu"), "all");
 
-        var navigator = menu.navigation({
-            // selectedClass: 'Selected',
-            // slidingSubmenus: true,
-            // theme: 'dark',
-            title: 'Bangla Student Books'
-        });
+        // var navigator = menu.navigation({
+        //     // selectedClass: 'Selected',
+        //     // slidingSubmenus: true,
+        //     // theme: 'dark',
+        //     title: 'Bangla Student Books'
+        // });
 
-        var drawer = menu.offcanvas({
-            // position: 'left'
-        });
+        // var drawer = menu.offcanvas({
+        //     // position: 'left'
+        // });
 
-        //	Open the menu.
-        $('.menu-trigger').click(function () {
-            drawer.open();
-            return false;
-        });
+        // //	Open the menu.
+        // $('.menu-trigger').click(function () {
+        //     drawer.open();
+        //     return false;
+        // });
 
 
         if ($('.welcome-popup').length) {
@@ -194,6 +194,7 @@ $(function () {
             $('.mobile-search').toggleClass('active');
             return false;
         });
+        
     }
 
     carousel();

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Book;
+use App\Models\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -17,16 +19,46 @@ class CartController extends Controller
         if(empty($session_id)){
             $session_id = Str::random(40);
             Session::put('session_id',$session_id);
+        }
 
-            if(Auth::check())
+        $book = Book::where('id',$book_id)->first();
+        if($book){
+            if(Cart::where('book_id',$book_id)->where('session_id', $session_id)->exists())
             {
-                
-
+                return response()->json(['status'=> 'Book Already added']);
             }
             else
             {
+                if(Auth::check())
+                {
+                    Cart::create([
+                        'user_id' => Auth::id(),
+                        'book_id' => $book_id,
+                        'qty' => 1,
+                        'session_id' => $session_id,
+                    ]);
+                    return response()->json(['status'=> $book->name.' is added to cart']);
+
                 
+                }
+                else
+                {
+                    Cart::create([
+                        'book_id' => $book_id,
+                        'qty' => 1,
+                        'session_id' => $session_id,
+                    ]);
+                    return response()->json(['status'=> $book->name.' is added to cart']);
+                }                                  
+
             }
+          
         }
+        else
+        {
+            return response()->json(['status'=> 'No such book']);
+        }
+            
+    
     }
 }

@@ -62,9 +62,10 @@ echo $sessionId;
                                 data-autoplay="true">
                                 @php
                                     $books = Book::where('subject_id', $subject->id)->where('status', 1 )->get();
+                                    $sl =1;
                                 @endphp
                                 @foreach ($books as $book)
-                                    <input type="hidden" value = "{{ $book->id }}" class = 'book_id'>
+                                    
                                 <div class="single-item p-1">
                                     <div class="single-product border border-light">
                                         <figure class="mb-0 position-relative overflow-hidden">
@@ -76,7 +77,9 @@ echo $sessionId;
                                                 <a href="#">
                                                     <i class="fal fa-heart"></i>
                                                 </a>
-                                                <a class="addToCart">
+                                                <a href="" id="addToCart{{ $sl++ }}">
+                                                <input type="hidden" value = "{{ $book->slug }}" id = 'book_id{{ $sl++ }}'>
+
                                                     <i class="fal fa-shopping-cart"></i>
                                                 </a>
                                             </div>
@@ -84,7 +87,7 @@ echo $sessionId;
                                         <div class="p-10px pt-3">
                                             <div class="border-bottom pb-2 mb-2">
                                                 <h6 class="h6 mb-1 text-truncate-2 lh-1-5 hov-text-primary" style="height: 46px;">
-                                                    <a href="./single-product.html">{{ $book->name }}</a>
+                                                    <a href="./single-product.html">{{ $book->name }}  {{ $book->id }}</a>
                                                 </h6>
                                             </div>
                                             <div class="fs-14 mb-1" style="height: 42px;">
@@ -144,7 +147,13 @@ echo $sessionId;
 @endsection
 
 @section('scripts')
-
-<script type="text/javascript" src="{{ asset('frontend/js/script.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        $('#').click(function (e) { 
+            e.preventDefault();
+            
+        });
+    });
+</script>
 
 @endsection
