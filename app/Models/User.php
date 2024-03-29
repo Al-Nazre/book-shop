@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\UserInfo;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -42,4 +44,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the info that owns the info
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function info(): BelongsTo
+    {
+        return $this->belongsTo(UserInfo::class, 'id','user_id');
+    }
+    public function address(): BelongsTo
+    {
+        return $this->belongsTo(Address::class, 'user_id');
+    }
 }

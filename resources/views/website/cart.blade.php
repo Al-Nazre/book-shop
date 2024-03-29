@@ -78,7 +78,7 @@
                       <dd class="ms-auto text-dark h5"> {{ $totalPrice }} </dd>
                    </dl>
                    <hr>
-                   <a href="#" class="btn btn-primary mb-2 w-100">Checkout</a> <a href="#" class="btn btn-outline-primary w-100">Installment</a> 
+                   <a href="{{ route('checkout') }}" class="btn btn-primary mb-2 w-100">Checkout</a> <a href="#" class="btn btn-outline-primary w-100">Installment</a> 
                 </div>
                 <!-- card-body.// --> 
              </div>

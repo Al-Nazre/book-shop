@@ -60,6 +60,12 @@
       {{-- <script src="{{ asset('admin/js/main.js') }}"></script> --}}
      {{-- <script src="{{ asset('frontend/js/jquery.min.js') }}"></script> --}}
 
+     @if (session('status')){
+      <script>
+        swal("{{ session('status') }}");
+      </script>
+        }
+    @endif
       @yield('scripts')
 
 

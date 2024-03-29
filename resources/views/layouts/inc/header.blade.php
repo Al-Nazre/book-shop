@@ -140,7 +140,7 @@
                                         <a class="btn btn-primary" href="{{ route('cart') }}">View Cart</a>
                                     </div>
                                     <div class="col-6 d-grid">
-                                        <a class="btn btn-secondary" href="./checkout.html">Checkout</a>
+                                        <a class="btn btn-secondary" href="{{ route('checkout') }}">Checkout</a>
                                     </div>
                                 </div>
                             </div>
