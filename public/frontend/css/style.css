@@ -1780,3 +1780,10 @@ input.form-control, textarea.form-control, .form-select {
     top: -5px;
     right: -8px;
 }
+
+
+#app {
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+}
