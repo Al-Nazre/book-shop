@@ -15,6 +15,7 @@ class CreateOrderTable extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->id();
+            $table->string('order_date');
             $table->string('order_no');
             $table->string('tracking_no')->nullable();
             $table->string('user_id');
@@ -25,7 +26,8 @@ class CreateOrderTable extends Migration
             $table->string('city');
             $table->string('house');
             $table->string('zip');
-            $table->string('status')->default('0');
+            $table->string('total_price');
+            $table->string('status')->default('Pending');
             $table->string('messeage')->nullable();
             $table->timestamps();
         });

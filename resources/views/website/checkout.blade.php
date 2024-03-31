@@ -52,7 +52,12 @@ use Illuminate\Support\Facades\Auth;
                  
                  <!-- row.// --> <label class="form-check mb-4"> <input class="form-check-input" type="checkbox" value=""> <span class="form-check-label"> Save and use as new Address</span> </label> 
                  <!-- row.// --> <label class="form-check mb-4"> <input class="form-check-input" type="checkbox" value="" checked> <span class="form-check-label"> Cash on Delivery </span> </label> 
+               
+                 @if($cart_items->count() > 0)
                  <button type="submit" class="btn btn-primary">Place Order</button> 
+                 @else
+                 @endif
+
                  </form>
               </div>
 

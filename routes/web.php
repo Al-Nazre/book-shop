@@ -49,11 +49,11 @@ Route::post('/add-to-cart/', [App\Http\Controllers\CartController::class, 'addTo
 Route::get('/cart/', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
 Route::post('/delete-cart-item/', [App\Http\Controllers\CartController::class, 'deletItem']);
 
-Route::get('/checkout/', [App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
 
-Route::post('/create-order/', [App\Http\Controllers\OrderController::class, 'create'])->name('order.create');
 
 Route::middleware(['auth'])->group(function () {
+Route::post('/create-order/', [App\Http\Controllers\OrderController::class, 'create'])->name('order.create');
+Route::get('/checkout/', [App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
     
 });
     
@@ -107,6 +107,11 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/add-book-type',[App\Http\Controllers\Admin\BookTypeController::class, 'add'])->name('book-type.add');
     Route::post('/insert-book-type',[App\Http\Controllers\Admin\BookTypeController::class, 'insert'])->name('book-type.insert');
     Route::get('/delete-book-type/{id}',[App\Http\Controllers\Admin\BookTypeController::class, 'delete'])->name('book-type.delete');
+
+  
+    Route::get('/admin-order',[App\Http\Controllers\Admin\OrderController::class, 'index'])->name('Admin.order.index');
+    Route::get('/admin-order-view/{id}',[App\Http\Controllers\Admin\OrderController::class, 'orderView']);
+    Route::post('/admin-order-update/{id}',[App\Http\Controllers\Admin\OrderController::class, 'updateStatus']);
 
 
     

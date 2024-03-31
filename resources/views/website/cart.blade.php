@@ -7,7 +7,14 @@
     <div class="row">
         <div class="col-md-8 col-lg-9">
 
-         @foreach ($cart_items as $item)
+      @if($cart_items->count()==0)
+      <article class="card card-body text-center mb-3 content">
+         <div class="row gy-3 align-items-center">
+            <h2>Your <i class="fa fa-shopping-cart"></i> cart is empty</h2>
+         </div>
+      </article>
+      @else
+      @foreach ($cart_items as $item)
             
             <article class="card card-body mb-3 content">
                 <div class="row gy-3 align-items-center">
@@ -54,8 +61,8 @@
                 <!-- row.// --> 
             </article>
 
-         @endforeach
-
+      @endforeach
+      @endif
         </div>
         <div class="col-md-4 col-lg-3">
             <div class="card">

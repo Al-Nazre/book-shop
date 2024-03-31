@@ -10,6 +10,7 @@ use App\Models\OrderList;
 use App\Models\User;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
@@ -27,7 +28,7 @@ class OrderController extends Controller
         
         }
         else{
-            return redirect()->back()->with('status', 'Login First');
+            return redirect('/login')->with('status', 'Login First to Checkout');
         }
     }
 
@@ -55,13 +56,13 @@ class OrderController extends Controller
         }
         $user_address = Address::where('user_id',Auth::id())->first();
         if(!$user_address){
-        Address::create([
-            'user_id'=>Auth::id(),
-            'address'=> $request->address,
-            'city'=> $request->city,
-            'house'=> $request->house,
-            'zip'=> $request->zip,
-        ]);
+            Address::create([
+                'user_id'=>Auth::id(),
+                'address'=> $request->address,
+                'city'=> $request->city,
+                'house'=> $request->house,
+                'zip'=> $request->zip,
+            ]);
         }
         else{
             
@@ -77,17 +78,19 @@ class OrderController extends Controller
         
         $user = User::where('id', Auth::id())->first();
         $order = Order::create([
-        'name'=> $request->first_name.' '.$request->last_name,
-        'order_no'=>'order'.rand(1111,9999),
-        'tracking_no'=>'T-'.rand(1111,9999),
-        'user_id' => Auth::id(),
-        'email' => $user->email,
-        'phone' => $user->info->phone,
-        'address'=> $request->address,
-        'city'=> $request->city,
-        'house'=> $request->house,
-        'zip'=> $request->zip,
-        'messeage'=> $request->messeage,
+            'name'=> $request->first_name.' '.$request->last_name,
+            'order_date'=> Carbon::now()->toDateString(),
+            'order_no'=>'order'.rand(1111,9999),
+            'tracking_no'=>'T-'.rand(1111,9999),
+            'user_id' => Auth::id(),
+            'email' => $user->email,
+            'phone' => $user->info->phone,
+            'address'=> $request->address,
+            'city'=> $request->city,
+            'house'=> $request->house,
+            'zip'=> $request->zip,
+            'total_price' => $this->totalPrice(Auth::id()),
+            'messeage'=> $request->messeage,
         ]);
          
         $cart_items = Cart::where('user_id', Auth::id())->get();

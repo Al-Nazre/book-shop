@@ -16,6 +16,7 @@ class Order extends Model
 
     protected $table = 'order';
     protected $fillable = [
+            'order_date',
             'order_no',
             'tracking_no',
             'user_id',
@@ -26,13 +27,19 @@ class Order extends Model
             'city',
             'house',
             'zip',
+            'total_price',
             'status',
             'messeage',
     ];
 
-    public function list(): BelongsToMany 
+    /**
+     * Get all of the items for the Order
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function items(): HasMany
     {
-        return $this->belongsToMany(OrderList::class, 'order_id');
+        return $this->hasMany(OrderList::class, 'order_id');
     }
     /**
      * Get the user associated with the Order

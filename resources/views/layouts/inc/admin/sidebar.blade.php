@@ -135,6 +135,24 @@
           </li>
         </ul>
       </li><!-- End user Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#order-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Order Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="order-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ route('Admin.order.index') }}">
+              <i class="bi bi-circle"></i><span>All Orders</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>Deleveri Charge</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End user Nav -->
      
     </ul>
 

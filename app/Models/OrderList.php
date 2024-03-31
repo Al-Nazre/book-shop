@@ -22,4 +22,13 @@ class OrderList extends Model
     public function order(): HasOne {
         return $this->hasOne(Order::class, 'id', 'order_id');
     }
+    /**
+     * Get the book associated with the OrderList
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function book(): HasOne
+    {
+        return $this->hasOne(Book::class, 'id', 'book_id');
+    }
 }
