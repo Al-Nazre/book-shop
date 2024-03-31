@@ -108,6 +108,11 @@ class OrderController extends Controller
         Cart::where('user_id', Auth::id())->delete();
         return redirect('/')->with('status', 'Your Order has been Created!');
     }
+
+    public function myOrderView(){
+        $orders = Order::where('user_id', Auth::id())->get();
+        return view('website.myOrder', compact('orders'));
+    }
    
     
 }
