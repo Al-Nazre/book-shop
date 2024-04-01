@@ -72,12 +72,17 @@ class HomeController extends Controller
         }
     }
 
-    public function subjectView($slug){
+    public function subjectView(){
+        $subjects = Subject::all();
+        return view('website.subjectView',compact('subjects'));
+    }
+
+    public function subSubjectView($slug){
         if(Subject::where('slug',$slug)->exists())
         {
             $subject = Subject::where('slug',$slug)->first();
             $sub_subjects = SubSubject::where('subject_id', $subject->id)->get();
-            return view('website.subjectView', compact('subject','sub_subjects'));
+            return view('website.subSubjectView', compact('subject','sub_subjects'));
         }
         else
         {

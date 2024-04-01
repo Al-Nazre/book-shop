@@ -11,8 +11,8 @@
                         <div class="col-lg-6">
                             @csrf
                             
-                            <div class="mb-4 form-outline">
-                                <label for="name" class="mb-2 fw-bold">Subject:</label>
+                            <div class="mb-3 form-outline">
+                                <label for="subject_id" class="mb-2 fw-bold">Subject:</label>
                                 <select class="form-select" aria-label="Default select example" name='subject_id'>
                                     <option selected>Select Subject</option>
 
@@ -22,20 +22,23 @@
                                     
                                 </select>
                             </div>
-                            
-                            <div class="mb-4 form-outline">
-                                <label for="name" class="mb-2 fw-bold">Sub-Subject:</label>
+                           
+                            <div class="mb-3 form-outline">
+                                <label for="sub_subject_id" class="mb-2 fw-bold">Sub-Subject:</label>
                                 <select class="form-select" aria-label="Default select example" name='sub_subject_id'>
                                     <option selected>Select Sub-Subject</option>
 
                                     @foreach ($subSubjects as $subject)
                                     <option value="{{ $subject->id }}">{{ $subject->name }}</option>
                                     @endforeach
+                                </select>
+
                             </div>
 
-                            <div class="mb-4 form-outline">
-                                <label for="name" class="mb-2 fw-bold">Author:</label>
-                                <select class="form-select" aria-label="Default select example" name='author_id'>
+
+                            <div class="mb-3 form-outline">
+                                <label for="author_id" class="mb-2 fw-bold">Author:</label>
+                                <select class="form-select"  name='author_id'>
                                     <option selected>Select Author</option>
 
                                     @foreach ($authors as $author)
@@ -46,8 +49,8 @@
                             </div>
                             
 
-                            <div class="mb-4 form-outline">
-                                <label for="name" class="mb-2 fw-bold">Publication:</label>
+                            <div class="mb-3 form-outline">
+                                <label for="publication_id" class="mb-2 fw-bold">Publication:</label>
                                 <select class="form-select" aria-label="Default select example" name='publication_id'>
                                     <option selected>Open Subject</option>
 
@@ -58,8 +61,8 @@
                                 </select>
                             </div>
                             
-                            <div class="mb-4 form-outline">
-                                <label for="name" class="mb-2 fw-bold">Book Type:</label>
+                            <div class="mb-3 form-outline">
+                                <label for="type_id" class="mb-2 fw-bold">Book Type:</label>
                                 <select class="form-select" aria-label="Default select example" name='type_id'>
                                     <option selected>Open book Type</option>
 
@@ -69,7 +72,7 @@
                                     
                                 </select>
                             </div>
-                            <div class="mb-4 form-outline">
+                            <div class="mb-3 form-outline">
                                 <label for="name" class="mb-2 fw-bold">Name:</label>
                                 <input type="text" class="form-control " name ='name' placeholder="Name">
                             </div>
@@ -78,7 +81,7 @@
                                 <input type="text" class="form-control" name ='slug' placeholder ='Slug'>
                             </div>
                             <div class="mb-3">
-                                <label for="name" class="mb-2 fw-bold">Code:</label>
+                                <label for="code" class="mb-2 fw-bold">Code:</label>
                                 <input type="text" class="form-control" name ='code' placeholder ='Code'>
                             </div>
                             <div class="mb-3">

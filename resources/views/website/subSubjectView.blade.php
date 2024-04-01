@@ -14,10 +14,10 @@
     </nav>
 
     <div class="row g-5">
-        @foreach ($subjects as $subject)
+        @foreach ($sub_subjects as $sub_subject)
             
       <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-         <a href="{{ url('/category/'.$subject->slug) }}">
+         <a href="{{ url('/category-books/'.$subject->slug.'/'.$sub_subject->slug) }}">
             <article class="card card-body" style="max-width: 280px;">
                <div class="text-center mx-lg-4">
                   <span class="rounded-circle text-warning icon-md bg-warning-light">
@@ -26,7 +26,7 @@
                      </svg>
                   </span> 
                   <div class="pt-3">
-                     <h6 class="title">{{ $subject->name }} </h6>
+                     <h6 class="title">{{ $sub_subject->name }} </h6>
                   </div>
                </div>
                <!-- itemside // --> 

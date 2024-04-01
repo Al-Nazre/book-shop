@@ -18,7 +18,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./category.html">
+                    <a href="{{ route('category') }}">
                         <span>বিষয়</span>
                     </a>
                 </li>
