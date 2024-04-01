@@ -48,13 +48,14 @@ Route::get('/book/{slug}', [App\Http\Controllers\HomeController::class, 'bookDet
 Route::post('/add-to-cart/', [App\Http\Controllers\CartController::class, 'addToCart']);
 Route::get('/cart/', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
 Route::post('/delete-cart-item/', [App\Http\Controllers\CartController::class, 'deletItem']);
+Route::post('/updae-cart-qty/', [App\Http\Controllers\CartController::class, 'updateQty']);
 
 
 
 Route::middleware(['auth'])->group(function () {
-Route::post('/create-order/', [App\Http\Controllers\OrderController::class, 'create'])->name('order.create');
-Route::get('/checkout/', [App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
-Route::get('/myOrders/', [App\Http\Controllers\OrderController::class, 'myOrderView'])->name('myOrder');
+    Route::post('/create-order/', [App\Http\Controllers\OrderController::class, 'create'])->name('order.create');
+    Route::get('/checkout/', [App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
+    Route::get('/myOrders/', [App\Http\Controllers\OrderController::class, 'myOrderView'])->name('myOrder');
     
 });
     

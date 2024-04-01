@@ -16,9 +16,16 @@ use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
     public function checkout(){
+
         if(Auth::check()){
 
             
+            $old_cart_items = Cart::where('user_id', Auth::id())->get();
+            foreach($old_cart_items as $item){
+                if($item->book->qty < $item->qty){
+                    $item->delete();
+                }
+            }
             $cart_items = Cart::where('user_id', Auth::id())->get();
             $totalPrice = $this->totalPrice(Auth::id());
             $qty = $cart_items->sum('qty');

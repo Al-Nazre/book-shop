@@ -66,10 +66,13 @@
                                                 <a href="#">
                                                     <i class="fal fa-heart"></i>
                                                 </a>
+                                                @if($book->qty > 0)                                               
                                                 <a href="" class="addToCart">
                                                 <input type="hidden" value = "{{ $book->id }}" class ='book-id'>
                                                     <i class="fal fa-shopping-cart"></i>
                                                 </a>
+                                                @else
+                                                @endif
                                             </div>
                                         </figure>
                                         <div class="p-10px pt-3">

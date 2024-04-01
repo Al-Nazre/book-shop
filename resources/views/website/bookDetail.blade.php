@@ -31,8 +31,23 @@
                                 <input type="hidden" value="{{ $book->id }}" class="book-id">
 
                                     <div class="row row-cols-auto gx-2 gy-3 align-items-center">
-                                        <div> <button  class="btn btn-primary addToCart"> <i class="fa fa-shopping-cart me-1"></i> Add to cart </button> </div>
-                                        <div> <a href="#" class="btn btn-outline-primary"> <i class="fa fa-heart me-1"></i> Wishlist </a> </div>
+                                        @if($book->qty > 0)                                               
+                                        <div> 
+                                            <button  class="btn btn-primary addToCart"> 
+                                                <i class="fa fa-shopping-cart me-1"></i> 
+                                                Add to cart 
+                                            </button> 
+                                        </div>
+                                        @else
+                                                <p>Out of Stock</p>
+
+                                        @endif
+                                        <div> 
+                                            <a href="#" class="btn btn-outline-primary"> 
+                                                <i class="fa fa-heart me-1"></i>
+                                                 Wishlist 
+                                            </a> 
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- info-div.// --> 

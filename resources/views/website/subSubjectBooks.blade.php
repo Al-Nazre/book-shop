@@ -15,7 +15,7 @@
     <div class="row g-4 my-5">
         @foreach ($books as $book )
             
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 content">
             <div class="single-item p-1">
                 <div class="single-product border border-light">
                     <figure class="mb-0 position-relative overflow-hidden">
@@ -27,9 +27,13 @@
                             <a href="#">
                                 <i class="fal fa-heart"></i>
                             </a>
-                            <a href="#">
+                            <input type="hidden" value = "{{ $book->id }}" class ='book-id'>
+                            @if($book->qty > 0)                                               
+                            <a href="" class="addToCart">
                                 <i class="fal fa-shopping-cart"></i>
                             </a>
+                            @else
+                            @endif
                         </div>
                     </figure>
                     <div class="p-10px pt-3">
@@ -65,5 +69,35 @@
         
     </div>
 </div>
+
+@endsection
+
+@section('scripts')
+<script>
+    $(document).ready(function () {
+        $('.addToCart').click(function (e) { 
+            e.preventDefault();
+             var book_id = $(this).closest('.content').find('.book-id').val();
+            //  alert(book_id);
+                
+        $.ajaxSetup({
+                headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+            });
+             $.ajax({
+                method: "POST",
+                url: "/add-to-cart/",
+                data: {
+                    'book_id' : book_id,
+                },
+                
+                success: function (response) {
+                    swal(response.status);
+                }
+             });
+        });
+    });
+</script>
 
 @endsection

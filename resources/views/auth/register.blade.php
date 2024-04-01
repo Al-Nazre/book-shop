@@ -2,53 +2,36 @@
 
 @section('content')
 
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card py-5">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                    <form method="POST" action="{{ route('register') }}">
-                                @csrf
-                            <div class="login-form">
-                                <h4 class="login-title">Register</h4>
-                                <div class="row d-flex">
-                                    <div class="col-md-12 col-12 mb-20">
-                                        <label>Name</label>
-                                        <input class="mb-0 @error('name') is-invalid @enderror" type="text" placeholder="Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                                        
-                                        @error('name')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="col-md-12 mb-20">
-                                        <label>Email Address*</label>
-                                        <input class="mb-0 @error('email') is-invalid @enderror" type="email" placeholder="Email Address" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                        @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="col-md-12 mb-20">
-                                        <label>Password</label>
-                                        <input class="mb-0  @error('password') is-invalid @enderror" type="password" placeholder="Password" name="password" required autocomplete="password">
-                                    </div>
-                                    <div class="col-md-12 mb-20">
-                                        <label>Confirm Password</label>
-                                        <input class="mb-0" type="password" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="register-button mt-0 w-100">Register</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+            <div class="card p-5">
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <h4 class="login-title text-center mb-3">Register</h4>
+                    <div class="row gx-3">
+                       <div class="col mb-4"> <label class="form-label">Name</label> 
+                        <input class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus> </div>
+                       <!-- col end.// --> 
+                       <div class="col mb-4"> <label class="form-label">Email</label> 
+                        <input class="form-control @error('email') is-invalid @enderror" type="email" placeholder="Email Address" name="email" value="{{ old('email') }}" required autocomplete="email"> </div>
+                       <!-- col end.// --> 
                     </div>
-                </div>
+                    <!-- row end.// --> 
+                    <div class="row">
+                       <div class="col mb-3"> <label class="form-label">Password</label> 
+                        <input class="form-control @error('password') is-invalid @enderror" type="password" placeholder="Password" name="password" required autocomplete="password"> 
+                    </div>
+                       <!-- col end.// --> 
+                       <div class="col mb-3"> <label class="form-label">Confirm password</label> 
+                        <input class="form-control" type="password" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password"> </div>
+                       <!-- col end.// --> 
+                    </div>
+                    <!-- row end.// --> 
+                    <div class="row d-flex mt-3 mb-4 align-items-center">
+                       <div class="col-auto mx-auto"> <button class="btn btn-primary" type="submit">Register now</button> </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

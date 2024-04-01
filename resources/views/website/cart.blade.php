@@ -35,6 +35,7 @@
                                <path d="M19 13H5v-2h14v2z"></path>
                             </svg>
                          </button>
+                               <input type="hidden" class="form-control stock-qty" value="{{ $item->book->qty }}"> 
                          <input type="text" class="form-control qty" value="{{ $item->qty }}"> 
                          <button class="btn btn-light qty-increment" type="button" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24">
@@ -49,7 +50,11 @@
                                 $discount = 100 - $item->book->discount;
                                 $d_price = ($item->book->price/100)*$discount;
                            @endphp
-                         <input type="text" class="form-control price" value="{{ $d_price }}"> 
+                           <div class="col-auto">
+                               <input type="hidden" class="form-control price" value="{{ $d_price }}"> 
+                               <input type="text" class="form-control outline item-price"  value="{{ $d_price*$item->qty }}"> 
+                               </div>
+
 
                    <div class="col d-flex">
                      <del class="pre-price position-relative"> ৳ {{ $item->book->price }} </del>
@@ -70,11 +75,11 @@
                    
                    <dl class="dlist-align d-flex">
                       <dt>Total price:</dt>
-                      <dd class="ms-auto">  {{ $totalPrice }} </dd>
+                      <dd class="ms-auto totalPrice">  {{ $totalPrice }} </dd>
                    </dl>
                    <dl class="dlist-align d-flex">
                       <dt>Quantity:</dt>
-                      <dd class="text-success ms-auto totalPrice" ><input value="{{ $qty }}"> </dd>
+                      <dd class="text-success ms-auto totalPrice" ><input class="totalQty" value="{{ $qty }}"> </dd>
                    </dl>
                    <dl class="dlist-align d-flex">
                       <dt>Discount:</dt>
@@ -85,7 +90,8 @@
                       <dd class="ms-auto text-dark h5"> {{ $totalPrice }} </dd>
                    </dl>
                    <hr>
-                   <a href="{{ route('checkout') }}" class="btn btn-primary mb-2 w-100">Checkout</a> <a href="#" class="btn btn-outline-primary w-100">Installment</a> 
+                   <a href="{{ route('checkout') }}" class="btn btn-primary mb-2 w-100">Checkout</a> 
+                   
                 </div>
                 <!-- card-body.// --> 
              </div>
@@ -102,8 +108,8 @@
       $('.qty-decrement').click(function (e) { 
          e.preventDefault();
 
-         var price = $(this).closest('.content').find('.price').val()
-
+         var price = $(this).closest('.content').find('.price').val();
+         var item_id = $(this).closest('.content').find('.item-id').val();
          var qty = $(this).closest('.content').find('.qty').val();
          var value = parseInt(qty, 10);
          // alert(value);
@@ -112,25 +118,70 @@
          {
             value--;
             $(this).closest('.content').find('.qty').val(value);
-            var item_price = price*value;
-
+           
          }
+         var item_price = price*value;
+         $(this).closest('.content').find('.item-price').val(item_price);
          
+         $.ajaxSetup({
+                headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+            });
+            var $this = $(this);
+         $.ajax({
+            method: "POST",
+            url: "/updae-cart-qty/",
+            data: {
+               'item_id': item_id,
+               'qty': value,
+            },
+           
+         });
       });
+
 
       $('.qty-increment').click(function (e) { 
          e.preventDefault();
-
+         var price = $(this).closest('.content').find('.price').val();
+         var item_id = $(this).closest('.content').find('.item-id').val();
+         var stock_qty = $(this).closest('.content').find('.stock-qty').val();
          var qty = $(this).closest('.content').find('.qty').val();
          var value = parseInt(qty, 10);
          // alert(value);
          value = isNaN(value) ? 0 : value;
-         if(value<10)
+         if(value<10 && stock_qty>value)
          {
             value++;
             $(this).closest('.content').find('.qty').val(value);
+           
          }
+         else{
+            swal('Out of stock');
+         }
+          var item_price = price*value;
+            $(this).closest('.content').find('.item-price').val(item_price);
+
+            $.ajaxSetup({
+                headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+            });
+            var $this = $(this);
+         $.ajax({
+            method: "POST",
+            url: "/updae-cart-qty/",
+            data: {
+               'item_id': item_id,
+               'qty': value,
+            },
+            
+            success: function (response) {
+                    swal(response.status);
+            }
+         });
       });
+
 
       $('.delete-item').click(function (e) { 
          e.preventDefault();

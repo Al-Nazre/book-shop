@@ -28,7 +28,7 @@
         
         <tbody>
           <tr>
-            <td class="text-center">{{ $order->date }}</td>
+            <td class="text-center">{{ $order->order_date }}</td>
             <td class="text-center">{{ $order->tracking_no }}</td>
             <td class="text-center">{{ $order->total_price }}/td>
             <td class="text-center">{{ $order->status }}</td>

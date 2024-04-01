@@ -106,4 +106,17 @@ class CartController extends Controller
 
         }
     }
+
+    public function updateQty(Request $request){
+        $item_id = $request->item_id;
+        $item_qty = $request->qty;
+        $item = Cart::where('id',$item_id)->first();
+        if($item->book->qty >= $item_qty){
+            $item->update([
+                'qty'=> $item_qty,
+            ]);          
+        }
+        
+
+    }
 }
