@@ -197,7 +197,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./dashboard/purchased.html">
+                                        <a href="{{ route('myOrder') }}">
                                             <i class="fal fa-shopping-cart"></i>
                                             <span>অর্ডার সমূহ</span>
                                         </a>

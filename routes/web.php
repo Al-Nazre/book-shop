@@ -54,6 +54,7 @@ Route::post('/delete-cart-item/', [App\Http\Controllers\CartController::class, '
 Route::middleware(['auth'])->group(function () {
 Route::post('/create-order/', [App\Http\Controllers\OrderController::class, 'create'])->name('order.create');
 Route::get('/checkout/', [App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
+Route::get('/myOrders/', [App\Http\Controllers\OrderController::class, 'myOrderView'])->name('myOrder');
     
 });
     
