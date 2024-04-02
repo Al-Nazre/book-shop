@@ -30,7 +30,7 @@
           <tr>
             <td class="text-center">{{ $order->order_date }}</td>
             <td class="text-center">{{ $order->tracking_no }}</td>
-            <td class="text-center">{{ $order->total_price }}/td>
+            <td class="text-center">{{ $order->total_price }}</td>
             <td class="text-center">{{ $order->status }}</td>
             <td class="d-flex justify-content-center"><button class="btn btn-sm btn-success px-3" data-bs-toggle="modal" data-bs-target="#detail{{ $order->id }}">View</button></td>
           </tr>
