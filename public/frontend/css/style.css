@@ -1787,3 +1787,17 @@ input.form-control, textarea.form-control, .form-select {
     display: flex;
     flex-direction: column;
 }
+
+
+
+
+/* ====================== Navigation ===================== */
+
+#home #home-Mega-menu {
+    display: none;
+    z-index: 100 ;
+}
+
+#home:hover #home-Mega-menu {
+    display: block;
+}
