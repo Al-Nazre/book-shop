@@ -3,7 +3,7 @@
 @section('content')
     
     <div class="card border-primary">
-            <h5 class="card-title text-success fs-2" align='center'>All Books</h5>
+            <h5 class="card-title text-success fs-2" align='center'>All Orders</h5>
                 <div class="card-body py-5">
                     <table class="table table-borderless">
                         <thead>
