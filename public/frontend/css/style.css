@@ -1801,3 +1801,16 @@ input.form-control, textarea.form-control, .form-select {
 #home:hover #home-Mega-menu {
     display: block;
 }
+
+
+.megamenu-btn {
+    color: #ffaf00;
+}
+
+.megamenu-btn:hover {
+    color: #fff;
+}
+
+.bg-megamenu {
+    background-color: #fff;
+}
