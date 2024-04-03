@@ -38,7 +38,7 @@
                             </svg>
                          </button>
                                <input type="hidden" class="form-control stock-qty" value="{{ $item->book->qty }}"> 
-                         <input type="text" class="form-control qty" value="{{ $item->qty }}"> 
+                         <input type="text" class="form-control text-end qty" style="border: 2px solid #f8f9fa;" value="{{ $item->qty }}"> 
                          <button class="btn btn-light qty-increment" type="button" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#999" viewBox="0 0 24 24">
                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
@@ -54,7 +54,7 @@
                            @endphp
                            <div class="col-auto">
                                <input type="hidden" class="form-control price" value="{{ $d_price }}"> 
-                               <input type="text" class="form-control outline item-price"  value="{{ $d_price*$item->qty }}"> 
+                               <input type="text" class="form-control outline item-price text-end" style="border: 2px solid #f8f9fa;"  value="{{ $d_price*$item->qty }}"> 
                                </div>
 
 
@@ -81,7 +81,7 @@
                    </dl>
                    <dl class="dlist-align d-flex">
                       <dt>Quantity:</dt>
-                      <dd class="text-success ms-auto totalPrice" ><input class="totalQty" value="{{ $qty }}"> </dd>
+                      <dd class="text-success ms-auto totalPrice" ><input class="totalQty text-end" style="border: none;" value="{{ $qty }}"> </dd>
                    </dl>
                    <dl class="dlist-align d-flex">
                       <dt>Discount:</dt>
