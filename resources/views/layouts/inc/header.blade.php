@@ -2,7 +2,7 @@
     <div class="container">
         <div class="d-flex align-items-center gap-lg-5 gap-md-4 gap-3 justify-content-between">
             <div class="flex-shrink-0 d-lg-none">
-                <button type="button" class="menu-trigger btn text-secondary" style="font-size: 28px;" data-toggle="modal" data-target="#myModal2"><i class="far fa-bars"></i></button>
+                <button type="button" class="menu-trigger btn text-secondary" style="font-size: 28px;"  data-toggle="modal" data-target="#myModal"><i class="far fa-bars"></i></button>
             </div>
             <div class="flex-shrink-0">
                 <a href="./index.html" class="d-block py-10px">
@@ -173,26 +173,22 @@
     {{-- Mobile menu  --}}
 
     <!-- Modal -->
-	<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+	<div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>
+					<h4 class="modal-title" id="myModalLabel">Left Sidebar</h4>
 				</div>
 
 				<div class="modal-body">
-					<p>
-						测试栗子blabla 测试栗子blabla 测试栗子blabla 测试栗子blabla 测试栗子blabla 测试栗子blabla 测试栗子blabla 测试栗子blabla测试栗子blabla
+					<p>Anim pariatur cliche reprehenderit, ef them accusamus labore sustainable VHS.
 					</p>
 				</div>
 
-			</div>
-			<!-- modal-content -->
-		</div>
-		<!-- modal-dialog -->
-	</div>
-	<!-- modal -->
+			</div><!-- modal-content -->
+		</div><!-- modal-dialog -->
+	</div><!-- modal -->
 </header>
             <!-- End Header Area -->
