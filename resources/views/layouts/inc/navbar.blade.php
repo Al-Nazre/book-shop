@@ -34,7 +34,7 @@
                             <div class="row text-center mb-3">
                                 @foreach ($subjects as $item)
                                 <div class="col-sm-3 col-md-4 col-lg-2">
-                                        <a href=""><p>{{ $item->name }}</p></a>
+                                        <a href="{{ url('/category/'.$item->slug) }}"><p>{{ $item->name }}</p></a>
                                 </div>
                                 @endforeach
 
