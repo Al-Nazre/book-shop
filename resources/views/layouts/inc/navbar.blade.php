@@ -1,3 +1,6 @@
+@php
+    
+@endphp
 <div class="nav-area border-bottom border-light bg-white d-lg-block d-none">
     <div class="container">
         <nav id="main-menu" class="position-relative">
@@ -6,40 +9,53 @@
                     <a href="{{ route('home') }}">
                         <span>হোম</span>
                     </a>
-                    <div class="position-absolute bg-secondary rounded-2 rounded-bottom border-top border-primary border-4" id="home-Mega-menu" style="left: 0; right: 0;">
+                    <div class="position-absolute bg-primary rounded-2 rounded-bottom border-top border-primary border-4" id="home-Mega-menu" style="left: 0; right: 0;">
                         <div class="p-4 text-center">
-                            <h3 class="display-3">Hello! :-)</h3>
+                            <a href=""><p></p></a>
+                            
                         </div>
                     </div>
                 </li>
                 <li>
-                    <a href="./category.html">
+                    <a href="">
                         <span>বই</span>
                     </a>
                 </li>
                 <li>
-                    <a href="./category.html">
+                    <a href="">
                         <span>জেনারেল বই</span>
                     </a>
                 </li>
-                <li>
+                <li class="position-static" id="home">
                     <a href="{{ route('category') }}">
                         <span>বিষয়</span>
                     </a>
+                    <div class="position-absolute bg-primary rounded-2 rounded-bottom border-top border-primary border-4" id="home-Mega-menu" style="left: 0; right: 0;">
+                        <div class="p-4 text-center">
+                            <a href=""><p></p></a>
+                            
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <a href="./category.html">
+                <li class="position-static" id="home">
+                    <a href="">
                         <span>লেখক</span>
                     </a>
+                    <div class="position-absolute bg-primary rounded-2 rounded-bottom border-top border-primary border-4" id="home-Mega-menu" style="left: 0; right: 0;">
+                        <div class="p-4 text-center">
+                            <a href=""><p></p></a>
+                            
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="./category.html">
+                    <a href="">
                         <span>প্রকাশক</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="./category.html">
+                    <a href="">
                         <span>প্রি-অর্ডার</span>
                     </a>
                 </li>

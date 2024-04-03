@@ -1,4 +1,6 @@
 @extends('layouts.master')
+@section('title', 'All Categories' )
+
 @section('content')
 
 

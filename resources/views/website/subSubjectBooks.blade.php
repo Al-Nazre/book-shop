@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('title')
+@section('title', $sub_subject->name )
 
 @endsection
 @section('content')

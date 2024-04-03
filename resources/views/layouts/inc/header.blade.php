@@ -35,7 +35,7 @@
                     <li class="dropdown d-md-block d-none">
                         <a class="d-flex align-items-end position-relative p-10px" data-bs-toggle="dropdown" href="#">
                             <i class="fal fa-shopping-bag fa-2x"></i>
-                            <span class="count">2</span>
+                            <span class="count">..</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-xl p-0">
                             <div class="cart_area">
@@ -43,6 +43,7 @@
                                     <h6 class="mb-0 h6">My Cart</h6>
                                 </div>
                                 <div class="cart_list c-scrollbar-light overflow-auto px-4 pt-3" style="max-height: 352px;">
+
                                     <div class="d-flex gap-3 align-items-center pb-3 mb-3 border-bottom border-light">
                                         <div class="flex-shrink-0">
                                             <img class="lazyload img-fit" data-src="./assets/images/products/1.webp" width="70" height="70" alt="cart product thumbnail">
@@ -64,69 +65,10 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="d-flex gap-3 align-items-center pb-3 mb-3 border-bottom border-light">
-                                        <div class="flex-shrink-0">
-                                            <img class="lazyload img-fit" data-src="./assets/images/products/2.webp" width="70" height="70" alt="cart product thumbnail">
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <a class="fw-500 text-truncate-2" href="single-product.html"> জয়কলি প্রশ্নব্যাংক ক ইউনিট বিজ্ঞান বিভাগ </a>
-                                            <div class="cat">
-                                                <a class="text-primary fs-13 fw-500" href="#"> মাহাবুব হাসান ঢাবি </a>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0 text-end">
-                                            <div class="mb-2">
-                                                <a class="btn mb-0 text-secondary fw-600 rounded-pill px-10px py-1 fs-15" style="background-color: rgb(47 48 80 / 15%);" href="#">
-                                                    <i class="fal fa-trash-alt"></i>
-                                                </a>
-                                            </div>
-                                            <p class="btn mb-0 text-secondary fw-600 rounded-pill fs-14 py-1 px-10px" style="background-color: rgb(47 48 80 / 15%);">
-                                                <strong>৳</strong> 4000
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex gap-3 align-items-center pb-3 mb-3 border-bottom border-light">
-                                        <div class="flex-shrink-0">
-                                            <img class="lazyload img-fit" data-src="./assets/images/products/3.webp" width="70" height="70" alt="cart product thumbnail">
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <a class="fw-500 text-truncate-2" href="single-product.html"> জয়কলি প্রশ্নব্যাংক ক ইউনিট বিজ্ঞান বিভাগ </a>
-                                            <div class="cat">
-                                                <a class="text-primary fs-13 fw-500" href="#"> মাহাবুব হাসান ঢাবি </a>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0 text-end">
-                                            <div class="mb-2">
-                                                <a class="btn mb-0 text-secondary fw-600 rounded-pill px-10px py-1 fs-15" style="background-color: rgb(47 48 80 / 15%);" href="#">
-                                                    <i class="fal fa-trash-alt"></i>
-                                                </a>
-                                            </div>
-                                            <p class="btn mb-0 text-secondary fw-600 rounded-pill fs-14 py-1 px-10px" style="background-color: rgb(47 48 80 / 15%);">
-                                                <strong>৳</strong> 4500
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex gap-3 align-items-center pb-3 mb-3 border-bottom border-light">
-                                        <div class="flex-shrink-0">
-                                            <img class="lazyload img-fit" data-src="./assets/images/products/4.webp" width="70" height="70" alt="cart product thumbnail">
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <a class="fw-500 text-truncate-2" href="single-product.html"> জয়কলি প্রশ্নব্যাংক ক ইউনিট বিজ্ঞান বিভাগ </a>
-                                            <div class="cat">
-                                                <a class="text-primary fs-13 fw-500" href="#"> মাহাবুব হাসান ঢাবি </a>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0 text-end">
-                                            <div class="mb-2">
-                                                <a class="btn mb-0 text-secondary fw-600 rounded-pill px-10px py-1 fs-15" style="background-color: rgb(47 48 80 / 15%);" href="#">
-                                                    <i class="fal fa-trash-alt"></i>
-                                                </a>
-                                            </div>
-                                            <p class="btn mb-0 text-secondary fw-600 rounded-pill fs-14 py-1 px-10px" style="background-color: rgb(47 48 80 / 15%);">
-                                                <strong>৳</strong> 4000
-                                            </p>
-                                        </div>
-                                    </div>
+
+
+                        
+                                    
                                 </div>
                                 <div class="py-3 px-4">
                                     <div class="text-end">

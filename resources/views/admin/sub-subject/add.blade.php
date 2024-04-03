@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('title','Admin - Sub-subject')
 
 @section('content')
   <div class="pagetitle">

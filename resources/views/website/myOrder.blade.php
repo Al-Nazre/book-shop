@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title','My Order')
 
 @section('content')
 

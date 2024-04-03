@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('title','Admin - Book Type')
 
 @section('content')
   <div class="pagetitle">
