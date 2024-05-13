@@ -46,7 +46,7 @@ Route::get('/category-books/{slug}', [App\Http\Controllers\HomeController::class
 Route::get('/category-books/{subject_slug}/{sub_subject_slug}', [App\Http\Controllers\HomeController::class, 'subSubjectBooks'])->name('subSubjectBooks');
 Route::get('/book/{slug}', [App\Http\Controllers\HomeController::class, 'bookDetail'])->name('bookDetail');
 
-Route::post('/add-to-cart/', [App\Http\Controllers\CartController::class, 'addToCart']);
+Route::post('/add-to-cart/', [App\Http\Controllers\CartController::class, 'addToCart'])->name('addToCart');
 Route::get('/cart/', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
 Route::post('/delete-cart-item/', [App\Http\Controllers\CartController::class, 'deletItem']);
 Route::post('/updae-cart-qty/', [App\Http\Controllers\CartController::class, 'updateQty']);

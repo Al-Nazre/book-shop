@@ -192,7 +192,7 @@
             });
              $.ajax({
                 method: "POST",
-                url: "/add-to-cart/",
+                url: '{{ route('addToCart') }}',
                 data: {
                     'book_id' : book_id,
                 },
