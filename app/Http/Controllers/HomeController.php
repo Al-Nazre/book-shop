@@ -33,7 +33,7 @@ class HomeController extends Controller
         return view('website.home',compact('trend_subjects'));
     }
     function testUi(){
-        return view('test');
+        return view('test-login');
     }
 
     public function subjectBooks($slug){
