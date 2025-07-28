@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
     {{-- Frontend CSS --}}
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
         
@@ -29,7 +29,7 @@
         {{-- <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
 
         <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.icons.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-icons.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
 </head>
